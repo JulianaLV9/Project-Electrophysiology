@@ -1,0 +1,2099 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<SETTINGS>
+  <INFO>
+    <VERSION>0.6.7</VERSION>
+    <PLUGIN_API_VERSION>8</PLUGIN_API_VERSION>
+    <DATE>11 Sep 2025 18:11:51</DATE>
+    <OS>Windows 7</OS>
+    <MACHINE name="GCXYHQ2" cpu_model="Intel(R) Core(TM) i7-6700 CPU @ 3.40GHz"
+             cpu_num_cores="8"/>
+  </INFO>
+  <SIGNALCHAIN>
+    <PROCESSOR name="Acquisition Board" insertionPoint="0" pluginName="Acquisition Board"
+               type="4" index="3" libraryName="Rhythm Plugins" libraryVersion="0.2.6"
+               processorType="2" nodeId="110">
+      <GLOBAL_PARAMETERS/>
+      <STREAM name="Rhythm Data" description="Continuous and event data from a device running Rhythm FPGA firmware"
+              sample_rate="30000.0" channel_count="32">
+        <PARAMETERS/>
+      </STREAM>
+      <CUSTOM_PARAMETERS/>
+      <EDITOR isCollapsed="0" isDrawerOpen="0" displayName="Acquisition Board"
+              activeStream="0" Type="Visualizer" SampleRate="17" SampleRateString="30.0 kS/s"
+              LowCut="2.495988241877236" HighCut="7603.76512183337" AUXsOn="0"
+              ADCsOn="0" AudioOutputL="-1" AudioOutputR="-1" NoiseSlicer="0"
+              TTLFastSettle="1" DAC_TTL="1" DAC_HPF="1" DSPOffset="0" DSPCutoffFreq="0.1457129257077072"
+              save_impedance_measurements="0" auto_measure_impedances="0" LEDs="0"
+              ClockDivideRatio="1" Channel_Naming_Scheme="1">
+        <TAB Active="0" Index="-1"/>
+        <WINDOW Active="0"/>
+        <HSOPTIONS index="0" hs1_full_channels="1" hs2_full_channels="0"/>
+        <HSOPTIONS index="1" hs1_full_channels="0" hs2_full_channels="0"/>
+        <HSOPTIONS index="2" hs1_full_channels="0" hs2_full_channels="0"/>
+        <HSOPTIONS index="3" hs1_full_channels="0" hs2_full_channels="0"/>
+        <ADCRANGE Channel="0" Range="0"/>
+        <ADCRANGE Channel="1" Range="0"/>
+        <ADCRANGE Channel="2" Range="0"/>
+        <ADCRANGE Channel="3" Range="0"/>
+        <ADCRANGE Channel="4" Range="0"/>
+        <ADCRANGE Channel="5" Range="0"/>
+        <ADCRANGE Channel="6" Range="0"/>
+        <ADCRANGE Channel="7" Range="0"/>
+      </EDITOR>
+    </PROCESSOR>
+    <PROCESSOR name="Bandpass Filter" insertionPoint="1" pluginName="Bandpass Filter"
+               type="1" index="5" libraryName="Bandpass Filter" libraryVersion="0.6.7"
+               processorType="1" nodeId="112">
+      <GLOBAL_PARAMETERS/>
+      <STREAM name="Rhythm Data" description="Continuous and event data from a device running Rhythm FPGA firmware"
+              sample_rate="30000.0" channel_count="32">
+        <PARAMETERS enable_stream="1" high_cut="6000.0" low_cut="300.0" Channels=""/>
+      </STREAM>
+      <CUSTOM_PARAMETERS/>
+      <EDITOR isCollapsed="0" isDrawerOpen="0" displayName="Bandpass Filter"
+              activeStream="0"/>
+    </PROCESSOR>
+    <PROCESSOR name="Splitter" insertionPoint="1" pluginName="Splitter" type="0"
+               index="1" libraryName="" libraryVersion="" processorType="4"
+               nodeId="117">
+      <GLOBAL_PARAMETERS/>
+      <STREAM name="Rhythm Data" description="Continuous and event data from a device running Rhythm FPGA firmware"
+              sample_rate="30000.0" channel_count="32">
+        <PARAMETERS enable_stream="1"/>
+      </STREAM>
+      <CUSTOM_PARAMETERS activePath="1"/>
+      <EDITOR isCollapsed="0" isDrawerOpen="0" displayName="Splitter"/>
+    </PROCESSOR>
+    <PROCESSOR name="LFP Viewer" insertionPoint="1" pluginName="LFP Viewer"
+               type="1" index="6" libraryName="LFP viewer" libraryVersion="0.6.7"
+               processorType="3" nodeId="111">
+      <GLOBAL_PARAMETERS/>
+      <STREAM name="Rhythm Data-A" description="Continuous and event data from a device running Rhythm FPGA firmware"
+              sample_rate="30000.0" channel_count="32">
+        <PARAMETERS enable_stream="1"/>
+      </STREAM>
+      <CUSTOM_PARAMETERS/>
+      <EDITOR isCollapsed="0" isDrawerOpen="0" displayName="LFP Viewer" activeStream="0"
+              Type="LfpDisplayEditor">
+        <TAB Active="0" Index="-1"/>
+        <WINDOW Active="1" x="0" y="22" width="1536" height="804"/>
+        <VALUES SelectedLayout="2"/>
+        <LFPDISPLAY0 SubprocessorID="10001" Range="250,2000,10.0" Timebase="5.0" Spread="50"
+                     colourScheme="1" colorGrouping="1" spikeRaster="OFF" clipWarning="1"
+                     satWarning="1" reverseOrder="0" sortByDepth="0" channelSkip="1"
+                     showChannelNum="0" subtractOffset="0" isInverted="0" triggerSource="1"
+                     trialAvg="0" singleChannelView="-1" EventButtonState="255" ChannelDisplayState="11111111111111111111111111111111"
+                     ScrollX="0" ScrollY="0"/>
+        <LFPDISPLAY1 SubprocessorID="10001" Range="250,2000,10.0" Timebase="5.0" Spread="40"
+                     colourScheme="1" colorGrouping="1" spikeRaster="OFF" clipWarning="1"
+                     satWarning="1" reverseOrder="0" sortByDepth="0" channelSkip="1"
+                     showChannelNum="0" subtractOffset="0" isInverted="0" triggerSource="1"
+                     trialAvg="0" singleChannelView="-1" EventButtonState="255" ChannelDisplayState="11111111111111111111111111111111"
+                     ScrollX="0" ScrollY="563"/>
+        <LFPDISPLAY2 SubprocessorID="10001" Range="250,2000,10.0" Timebase="2.0" Spread="40"
+                     colourScheme="1" colorGrouping="1" spikeRaster="OFF" clipWarning="1"
+                     satWarning="1" reverseOrder="0" sortByDepth="0" channelSkip="1"
+                     showChannelNum="0" subtractOffset="0" isInverted="0" triggerSource="1"
+                     trialAvg="0" singleChannelView="-1" EventButtonState="255" ChannelDisplayState="11111111111111111111111111111111"
+                     ScrollX="0" ScrollY="0"/>
+        <CANVAS doubleVerticalSplitRatio="0.5" doubleHorizontalSplitRatio="0.5"
+                tripleHorizontalSplitRatio="0.33,0.66" tripleVerticalSplitRatio="0.33,0.66"
+                showAllOptions="0"/>
+      </EDITOR>
+    </PROCESSOR>
+    <PROCESSOR name="Audio Monitor" insertionPoint="1" pluginName="Audio Monitor"
+               type="0" index="4" libraryName="" libraryVersion="" processorType="6"
+               nodeId="113">
+      <GLOBAL_PARAMETERS audio_output="1" mute_audio="0"/>
+      <STREAM name="Rhythm Data-A" description="Continuous and event data from a device running Rhythm FPGA firmware"
+              sample_rate="30000.0" channel_count="32">
+        <PARAMETERS enable_stream="1" Channels="31,1,3,2"/>
+      </STREAM>
+      <CUSTOM_PARAMETERS/>
+      <EDITOR isCollapsed="0" isDrawerOpen="0" displayName="Audio Monitor"
+              activeStream="0"/>
+    </PROCESSOR>
+    <PROCESSOR name="Record Node" insertionPoint="1" pluginName="Record Node"
+               type="0" index="3" libraryName="" libraryVersion="" processorType="8"
+               nodeId="114">
+      <GLOBAL_PARAMETERS/>
+      <STREAM name="Rhythm Data-A" description="Continuous and event data from a device running Rhythm FPGA firmware"
+              sample_rate="30000.0" channel_count="32">
+        <PARAMETERS enable_stream="1"/>
+      </STREAM>
+      <CUSTOM_PARAMETERS path="C:\Users\Plexon\Documents\Open Ephys" engine="BINARY" recordEvents="1"
+                         recordSpikes="1" fifoMonitorsVisible="1">
+        <STREAM isMainStream="1" sync_line="0" name="Rhythm Data-A" source_node_id="110"
+                sample_rate="30000.0" channel_count="32" recording_state="ALL"/>
+      </CUSTOM_PARAMETERS>
+      <EDITOR isCollapsed="0" isDrawerOpen="0" displayName="Record Node" activeStream="0"/>
+    </PROCESSOR>
+    <SWITCH number="2"/>
+    <PROCESSOR name="Spike Detector" insertionPoint="1" pluginName="Spike Detector"
+               type="1" index="1" libraryName="Basic Spike Display" libraryVersion="0.6.7"
+               processorType="1" nodeId="120">
+      <GLOBAL_PARAMETERS/>
+      <STREAM name="Rhythm Data-B" description="Continuous and event data from a device running Rhythm FPGA firmware"
+              sample_rate="30000.0" channel_count="32">
+        <PARAMETERS enable_stream="1"/>
+      </STREAM>
+      <CUSTOM_PARAMETERS>
+        <SPIKE_CHANNEL name="Electrode 1" description="Electrode from Spike Detector 120"
+                       num_channels="1" sample_rate="30000.0" stream_name="Rhythm Data-B"
+                       stream_source="110" local_channels="1" thrshlder_type="0" abs_threshold1="-50.0"
+                       std_threshold1="4.0" dyn_threshold1="4.0" waveform_type="0"/>
+        <SPIKE_CHANNEL name="Electrode 2" description="Electrode from Spike Detector 120"
+                       num_channels="1" sample_rate="30000.0" stream_name="Rhythm Data-B"
+                       stream_source="110" local_channels="2" thrshlder_type="0" abs_threshold1="-50.0"
+                       std_threshold1="4.0" dyn_threshold1="4.0" waveform_type="0"/>
+        <SPIKE_CHANNEL name="Electrode 3" description="Electrode from Spike Detector 120"
+                       num_channels="1" sample_rate="30000.0" stream_name="Rhythm Data-B"
+                       stream_source="110" local_channels="3" thrshlder_type="0" abs_threshold1="-50.0"
+                       std_threshold1="4.0" dyn_threshold1="4.0" waveform_type="0"/>
+        <SPIKE_CHANNEL name="Electrode 4" description="Electrode from Spike Detector 120"
+                       num_channels="1" sample_rate="30000.0" stream_name="Rhythm Data-B"
+                       stream_source="110" local_channels="4" thrshlder_type="0" abs_threshold1="-50.0"
+                       std_threshold1="4.0" dyn_threshold1="4.0" waveform_type="0"/>
+        <SPIKE_CHANNEL name="Electrode 5" description="Electrode from Spike Detector 120"
+                       num_channels="1" sample_rate="30000.0" stream_name="Rhythm Data-B"
+                       stream_source="110" local_channels="5" thrshlder_type="0" abs_threshold1="-50.0"
+                       std_threshold1="4.0" dyn_threshold1="4.0" waveform_type="0"/>
+        <SPIKE_CHANNEL name="Electrode 6" description="Electrode from Spike Detector 120"
+                       num_channels="1" sample_rate="30000.0" stream_name="Rhythm Data-B"
+                       stream_source="110" local_channels="6" thrshlder_type="0" abs_threshold1="-50.0"
+                       std_threshold1="4.0" dyn_threshold1="4.0" waveform_type="0"/>
+        <SPIKE_CHANNEL name="Electrode 7" description="Electrode from Spike Detector 120"
+                       num_channels="1" sample_rate="30000.0" stream_name="Rhythm Data-B"
+                       stream_source="110" local_channels="7" thrshlder_type="0" abs_threshold1="-50.0"
+                       std_threshold1="4.0" dyn_threshold1="4.0" waveform_type="0"/>
+        <SPIKE_CHANNEL name="Electrode 8" description="Electrode from Spike Detector 120"
+                       num_channels="1" sample_rate="30000.0" stream_name="Rhythm Data-B"
+                       stream_source="110" local_channels="8" thrshlder_type="0" abs_threshold1="-50.0"
+                       std_threshold1="4.0" dyn_threshold1="4.0" waveform_type="0"/>
+        <SPIKE_CHANNEL name="Electrode 9" description="Electrode from Spike Detector 120"
+                       num_channels="1" sample_rate="30000.0" stream_name="Rhythm Data-B"
+                       stream_source="110" local_channels="9" thrshlder_type="0" abs_threshold1="-50.0"
+                       std_threshold1="4.0" dyn_threshold1="4.0" waveform_type="0"/>
+        <SPIKE_CHANNEL name="Electrode 10" description="Electrode from Spike Detector 120"
+                       num_channels="1" sample_rate="30000.0" stream_name="Rhythm Data-B"
+                       stream_source="110" local_channels="10" thrshlder_type="0" abs_threshold1="-50.0"
+                       std_threshold1="4.0" dyn_threshold1="4.0" waveform_type="0"/>
+        <SPIKE_CHANNEL name="Electrode 11" description="Electrode from Spike Detector 120"
+                       num_channels="1" sample_rate="30000.0" stream_name="Rhythm Data-B"
+                       stream_source="110" local_channels="11" thrshlder_type="0" abs_threshold1="-50.0"
+                       std_threshold1="4.0" dyn_threshold1="4.0" waveform_type="0"/>
+        <SPIKE_CHANNEL name="Electrode 12" description="Electrode from Spike Detector 120"
+                       num_channels="1" sample_rate="30000.0" stream_name="Rhythm Data-B"
+                       stream_source="110" local_channels="12" thrshlder_type="0" abs_threshold1="-50.0"
+                       std_threshold1="4.0" dyn_threshold1="4.0" waveform_type="0"/>
+        <SPIKE_CHANNEL name="Electrode 13" description="Electrode from Spike Detector 120"
+                       num_channels="1" sample_rate="30000.0" stream_name="Rhythm Data-B"
+                       stream_source="110" local_channels="13" thrshlder_type="0" abs_threshold1="-50.0"
+                       std_threshold1="4.0" dyn_threshold1="4.0" waveform_type="0"/>
+        <SPIKE_CHANNEL name="Electrode 14" description="Electrode from Spike Detector 120"
+                       num_channels="1" sample_rate="30000.0" stream_name="Rhythm Data-B"
+                       stream_source="110" local_channels="14" thrshlder_type="0" abs_threshold1="-50.0"
+                       std_threshold1="4.0" dyn_threshold1="4.0" waveform_type="0"/>
+        <SPIKE_CHANNEL name="Electrode 15" description="Electrode from Spike Detector 120"
+                       num_channels="1" sample_rate="30000.0" stream_name="Rhythm Data-B"
+                       stream_source="110" local_channels="15" thrshlder_type="0" abs_threshold1="-50.0"
+                       std_threshold1="4.0" dyn_threshold1="4.0" waveform_type="0"/>
+        <SPIKE_CHANNEL name="Electrode 16" description="Electrode from Spike Detector 120"
+                       num_channels="1" sample_rate="30000.0" stream_name="Rhythm Data-B"
+                       stream_source="110" local_channels="16" thrshlder_type="0" abs_threshold1="-50.0"
+                       std_threshold1="4.0" dyn_threshold1="4.0" waveform_type="0"/>
+        <SPIKE_CHANNEL name="Electrode 17" description="Electrode from Spike Detector 120"
+                       num_channels="1" sample_rate="30000.0" stream_name="Rhythm Data-B"
+                       stream_source="110" local_channels="17" thrshlder_type="0" abs_threshold1="-50.0"
+                       std_threshold1="4.0" dyn_threshold1="4.0" waveform_type="0"/>
+        <SPIKE_CHANNEL name="Electrode 18" description="Electrode from Spike Detector 120"
+                       num_channels="1" sample_rate="30000.0" stream_name="Rhythm Data-B"
+                       stream_source="110" local_channels="18" thrshlder_type="0" abs_threshold1="-50.0"
+                       std_threshold1="4.0" dyn_threshold1="4.0" waveform_type="0"/>
+        <SPIKE_CHANNEL name="Electrode 19" description="Electrode from Spike Detector 120"
+                       num_channels="1" sample_rate="30000.0" stream_name="Rhythm Data-B"
+                       stream_source="110" local_channels="19" thrshlder_type="0" abs_threshold1="-50.0"
+                       std_threshold1="4.0" dyn_threshold1="4.0" waveform_type="0"/>
+        <SPIKE_CHANNEL name="Electrode 20" description="Electrode from Spike Detector 120"
+                       num_channels="1" sample_rate="30000.0" stream_name="Rhythm Data-B"
+                       stream_source="110" local_channels="20" thrshlder_type="0" abs_threshold1="-50.0"
+                       std_threshold1="4.0" dyn_threshold1="4.0" waveform_type="0"/>
+        <SPIKE_CHANNEL name="Electrode 21" description="Electrode from Spike Detector 120"
+                       num_channels="1" sample_rate="30000.0" stream_name="Rhythm Data-B"
+                       stream_source="110" local_channels="21" thrshlder_type="0" abs_threshold1="-50.0"
+                       std_threshold1="4.0" dyn_threshold1="4.0" waveform_type="0"/>
+        <SPIKE_CHANNEL name="Electrode 22" description="Electrode from Spike Detector 120"
+                       num_channels="1" sample_rate="30000.0" stream_name="Rhythm Data-B"
+                       stream_source="110" local_channels="22" thrshlder_type="0" abs_threshold1="-50.0"
+                       std_threshold1="4.0" dyn_threshold1="4.0" waveform_type="0"/>
+        <SPIKE_CHANNEL name="Electrode 23" description="Electrode from Spike Detector 120"
+                       num_channels="1" sample_rate="30000.0" stream_name="Rhythm Data-B"
+                       stream_source="110" local_channels="23" thrshlder_type="0" abs_threshold1="-50.0"
+                       std_threshold1="4.0" dyn_threshold1="4.0" waveform_type="0"/>
+        <SPIKE_CHANNEL name="Electrode 24" description="Electrode from Spike Detector 120"
+                       num_channels="1" sample_rate="30000.0" stream_name="Rhythm Data-B"
+                       stream_source="110" local_channels="24" thrshlder_type="0" abs_threshold1="-50.0"
+                       std_threshold1="4.0" dyn_threshold1="4.0" waveform_type="0"/>
+        <SPIKE_CHANNEL name="Electrode 25" description="Electrode from Spike Detector 120"
+                       num_channels="1" sample_rate="30000.0" stream_name="Rhythm Data-B"
+                       stream_source="110" local_channels="25" thrshlder_type="0" abs_threshold1="-50.0"
+                       std_threshold1="4.0" dyn_threshold1="4.0" waveform_type="0"/>
+        <SPIKE_CHANNEL name="Electrode 26" description="Electrode from Spike Detector 120"
+                       num_channels="1" sample_rate="30000.0" stream_name="Rhythm Data-B"
+                       stream_source="110" local_channels="26" thrshlder_type="0" abs_threshold1="-50.0"
+                       std_threshold1="4.0" dyn_threshold1="4.0" waveform_type="0"/>
+        <SPIKE_CHANNEL name="Electrode 27" description="Electrode from Spike Detector 120"
+                       num_channels="1" sample_rate="30000.0" stream_name="Rhythm Data-B"
+                       stream_source="110" local_channels="27" thrshlder_type="0" abs_threshold1="-50.0"
+                       std_threshold1="4.0" dyn_threshold1="4.0" waveform_type="0"/>
+        <SPIKE_CHANNEL name="Electrode 28" description="Electrode from Spike Detector 120"
+                       num_channels="1" sample_rate="30000.0" stream_name="Rhythm Data-B"
+                       stream_source="110" local_channels="28" thrshlder_type="0" abs_threshold1="-50.0"
+                       std_threshold1="4.0" dyn_threshold1="4.0" waveform_type="0"/>
+        <SPIKE_CHANNEL name="Electrode 29" description="Electrode from Spike Detector 120"
+                       num_channels="1" sample_rate="30000.0" stream_name="Rhythm Data-B"
+                       stream_source="110" local_channels="29" thrshlder_type="0" abs_threshold1="-50.0"
+                       std_threshold1="4.0" dyn_threshold1="4.0" waveform_type="0"/>
+        <SPIKE_CHANNEL name="Electrode 30" description="Electrode from Spike Detector 120"
+                       num_channels="1" sample_rate="30000.0" stream_name="Rhythm Data-B"
+                       stream_source="110" local_channels="30" thrshlder_type="0" abs_threshold1="-50.0"
+                       std_threshold1="4.0" dyn_threshold1="4.0" waveform_type="0"/>
+        <SPIKE_CHANNEL name="Electrode 31" description="Electrode from Spike Detector 120"
+                       num_channels="1" sample_rate="30000.0" stream_name="Rhythm Data-B"
+                       stream_source="110" local_channels="31" thrshlder_type="0" abs_threshold1="-50.0"
+                       std_threshold1="4.0" dyn_threshold1="4.0" waveform_type="0"/>
+        <SPIKE_CHANNEL name="Electrode 32" description="Electrode from Spike Detector 120"
+                       num_channels="1" sample_rate="30000.0" stream_name="Rhythm Data-B"
+                       stream_source="110" local_channels="32" thrshlder_type="0" abs_threshold1="-50.0"
+                       std_threshold1="4.0" dyn_threshold1="4.0" waveform_type="0"/>
+      </CUSTOM_PARAMETERS>
+      <EDITOR isCollapsed="0" isDrawerOpen="0" displayName="Spike Detector"
+              activeStream="0"/>
+    </PROCESSOR>
+    <PROCESSOR name="Spike Sorter" insertionPoint="1" pluginName="Spike Sorter"
+               type="1" index="12" libraryName="Spike Sorter" libraryVersion="0.2.0"
+               processorType="1" nodeId="118">
+      <GLOBAL_PARAMETERS/>
+      <STREAM name="Rhythm Data-B" description="Continuous and event data from a device running Rhythm FPGA firmware"
+              sample_rate="30000.0" channel_count="32">
+        <PARAMETERS enable_stream="1" electrode_index="25"/>
+      </STREAM>
+      <CUSTOM_PARAMETERS>
+        <ELECTRODE name="Electrode 1" stream_name="Rhythm Data-B" source_node_id="120"
+                   selectedUnit="-1" selectedBox="-1">
+          <PLOT stream_source="110" stream_name="Rhythm Data-B" spike_source="120"
+                name="Electrode 1">
+            <AXIS thresh="0.0" range="250.0"/>
+          </PLOT>
+          <PCA numChannels="1" waveformLength="40" pc1min="-10446.490234375"
+               pc2min="-9240.4267578125" pc1max="17417.681640625" pc2max="12746.6005859375">
+            <PCA_DIM pc1="-0.1530185341835022" pc2="0.08286290615797043"/>
+            <PCA_DIM pc1="-0.1592074930667877" pc2="0.08857356011867523"/>
+            <PCA_DIM pc1="-0.1637799739837646" pc2="0.09362324327230453"/>
+            <PCA_DIM pc1="-0.1676070243120193" pc2="0.09753738343715668"/>
+            <PCA_DIM pc1="-0.1730016767978668" pc2="0.09971948713064194"/>
+            <PCA_DIM pc1="-0.1809462457895279" pc2="0.09083239734172821"/>
+            <PCA_DIM pc1="-0.1963030099868774" pc2="0.02440353110432625"/>
+            <PCA_DIM pc1="-0.2253969609737396" pc2="-0.1364951580762863"/>
+            <PCA_DIM pc1="-0.2575702965259552" pc2="-0.3063245117664337"/>
+            <PCA_DIM pc1="-0.269255518913269" pc2="-0.3550112843513489"/>
+            <PCA_DIM pc1="-0.254871279001236" pc2="-0.2858995497226715"/>
+            <PCA_DIM pc1="-0.2328416705131531" pc2="-0.1971422880887985"/>
+            <PCA_DIM pc1="-0.2189874202013016" pc2="-0.1403831839561462"/>
+            <PCA_DIM pc1="-0.2118077725172043" pc2="-0.1035348549485207"/>
+            <PCA_DIM pc1="-0.2043383419513702" pc2="-0.06810179352760315"/>
+            <PCA_DIM pc1="-0.1959555298089981" pc2="-0.0322735495865345"/>
+            <PCA_DIM pc1="-0.1885344684123993" pc2="0.0002235882420791313"/>
+            <PCA_DIM pc1="-0.181304857134819" pc2="0.02850743196904659"/>
+            <PCA_DIM pc1="-0.1734384298324585" pc2="0.05309726670384407"/>
+            <PCA_DIM pc1="-0.1657548695802689" pc2="0.07483163475990295"/>
+            <PCA_DIM pc1="-0.1586512625217438" pc2="0.09439628571271896"/>
+            <PCA_DIM pc1="-0.1506786197423935" pc2="0.1114233955740929"/>
+            <PCA_DIM pc1="-0.1412658840417862" pc2="0.1258323341608047"/>
+            <PCA_DIM pc1="-0.1323860585689545" pc2="0.1385602802038193"/>
+            <PCA_DIM pc1="-0.1249522268772125" pc2="0.1501523405313492"/>
+            <PCA_DIM pc1="-0.1174220219254494" pc2="0.1597587615251541"/>
+            <PCA_DIM pc1="-0.1090288013219833" pc2="0.1666716784238815"/>
+            <PCA_DIM pc1="-0.101372018456459" pc2="0.1720880717039108"/>
+            <PCA_DIM pc1="-0.09557638317346573" pc2="0.1770044416189194"/>
+            <PCA_DIM pc1="-0.09000779688358307" pc2="0.1806773245334625"/>
+            <PCA_DIM pc1="-0.08311176300048828" pc2="0.182820737361908"/>
+            <PCA_DIM pc1="-0.07596796005964279" pc2="0.1841969341039658"/>
+            <PCA_DIM pc1="-0.06998872011899948" pc2="0.1846847534179688"/>
+            <PCA_DIM pc1="-0.06430714577436447" pc2="0.1837984323501587"/>
+            <PCA_DIM pc1="-0.05732060968875885" pc2="0.1821715533733368"/>
+            <PCA_DIM pc1="-0.05021669715642929" pc2="0.1801833063364029"/>
+            <PCA_DIM pc1="-0.04502840712666512" pc2="0.1774116456508636"/>
+            <PCA_DIM pc1="-0.04044799506664276" pc2="0.1736795902252197"/>
+            <PCA_DIM pc1="-0.03459503874182701" pc2="0.1690928786993027"/>
+            <PCA_DIM pc1="-0.02857843786478043" pc2="0.163880780339241"/>
+          </PCA>
+          <BOXES/>
+        </ELECTRODE>
+        <ELECTRODE name="Electrode 2" stream_name="Rhythm Data-B" source_node_id="120"
+                   selectedUnit="-1" selectedBox="-1">
+          <PLOT stream_source="110" stream_name="Rhythm Data-B" spike_source="120"
+                name="Electrode 2">
+            <AXIS thresh="0.0" range="250.0"/>
+          </PLOT>
+          <PCA numChannels="1" waveformLength="40" pc1min="-10791.251953125"
+               pc2min="-9118.29296875" pc1max="17933.771484375" pc2max="12675.19140625">
+            <PCA_DIM pc1="-0.1508856117725372" pc2="0.06461891531944275"/>
+            <PCA_DIM pc1="-0.1563389152288437" pc2="0.07029035687446594"/>
+            <PCA_DIM pc1="-0.1616316586732864" pc2="0.07549820840358734"/>
+            <PCA_DIM pc1="-0.1672394722700119" pc2="0.0791596993803978"/>
+            <PCA_DIM pc1="-0.17365762591362" pc2="0.07998669147491455"/>
+            <PCA_DIM pc1="-0.1819122135639191" pc2="0.06739262491464615"/>
+            <PCA_DIM pc1="-0.1980340033769608" pc2="-0.006458317395299673"/>
+            <PCA_DIM pc1="-0.2272181808948517" pc2="-0.177290603518486"/>
+            <PCA_DIM pc1="-0.2570711374282837" pc2="-0.3499579429626465"/>
+            <PCA_DIM pc1="-0.2656775116920471" pc2="-0.3809190392494202"/>
+            <PCA_DIM pc1="-0.250238835811615" pc2="-0.2801840603351593"/>
+            <PCA_DIM pc1="-0.2288276851177216" pc2="-0.1701655387878418"/>
+            <PCA_DIM pc1="-0.2151306867599487" pc2="-0.111759178340435"/>
+            <PCA_DIM pc1="-0.2075952291488647" pc2="-0.08178138732910156"/>
+            <PCA_DIM pc1="-0.2003829032182693" pc2="-0.05126412212848663"/>
+            <PCA_DIM pc1="-0.1922934353351593" pc2="-0.01754147931933403"/>
+            <PCA_DIM pc1="-0.1849450320005417" pc2="0.01332834456115961"/>
+            <PCA_DIM pc1="-0.1784982681274414" pc2="0.04009592160582542"/>
+            <PCA_DIM pc1="-0.1719773709774017" pc2="0.06368883699178696"/>
+            <PCA_DIM pc1="-0.1651464253664017" pc2="0.08417395502328873"/>
+            <PCA_DIM pc1="-0.158181756734848" pc2="0.1018129140138626"/>
+            <PCA_DIM pc1="-0.1510148793458939" pc2="0.1172947958111763"/>
+            <PCA_DIM pc1="-0.1433381140232086" pc2="0.1305648535490036"/>
+            <PCA_DIM pc1="-0.1356943249702454" pc2="0.1414371579885483"/>
+            <PCA_DIM pc1="-0.1290356367826462" pc2="0.1505803167819977"/>
+            <PCA_DIM pc1="-0.1228123381733894" pc2="0.158594474196434"/>
+            <PCA_DIM pc1="-0.1159497424960136" pc2="0.1654180437326431"/>
+            <PCA_DIM pc1="-0.108834445476532" pc2="0.1709443777799606"/>
+            <PCA_DIM pc1="-0.1022138968110085" pc2="0.1752896457910538"/>
+            <PCA_DIM pc1="-0.09579916298389435" pc2="0.1781793683767319"/>
+            <PCA_DIM pc1="-0.08911763876676559" pc2="0.1795248985290527"/>
+            <PCA_DIM pc1="-0.08228980749845505" pc2="0.1799411028623581"/>
+            <PCA_DIM pc1="-0.0759904608130455" pc2="0.1798197329044342"/>
+            <PCA_DIM pc1="-0.07026270776987076" pc2="0.1788779050111771"/>
+            <PCA_DIM pc1="-0.064079649746418" pc2="0.1767347753047943"/>
+            <PCA_DIM pc1="-0.05704862996935844" pc2="0.1737824529409409"/>
+            <PCA_DIM pc1="-0.05011728033423424" pc2="0.1704621762037277"/>
+            <PCA_DIM pc1="-0.04439358413219452" pc2="0.1666505932807922"/>
+            <PCA_DIM pc1="-0.03979333490133286" pc2="0.1623050421476364"/>
+            <PCA_DIM pc1="-0.03526732698082924" pc2="0.1575550734996796"/>
+          </PCA>
+          <BOXES/>
+        </ELECTRODE>
+        <ELECTRODE name="Electrode 3" stream_name="Rhythm Data-B" source_node_id="120"
+                   selectedUnit="-1" selectedBox="-1">
+          <PLOT stream_source="110" stream_name="Rhythm Data-B" spike_source="120"
+                name="Electrode 3">
+            <AXIS thresh="0.0" range="250.0"/>
+          </PLOT>
+          <PCA numChannels="1" waveformLength="40" pc1min="-10571.8017578125"
+               pc2min="-8950.166015625" pc1max="17623.84765625" pc2max="12133.3125">
+            <PCA_DIM pc1="-0.1541992127895355" pc2="0.07149864733219147"/>
+            <PCA_DIM pc1="-0.1590403914451599" pc2="0.07677698135375977"/>
+            <PCA_DIM pc1="-0.1642350107431412" pc2="0.08132680505514145"/>
+            <PCA_DIM pc1="-0.1701761037111282" pc2="0.08541613817214966"/>
+            <PCA_DIM pc1="-0.1767038255929947" pc2="0.08723291009664536"/>
+            <PCA_DIM pc1="-0.1848573833703995" pc2="0.0742197185754776"/>
+            <PCA_DIM pc1="-0.2015327960252762" pc2="-0.001230767811648548"/>
+            <PCA_DIM pc1="-0.2318768799304962" pc2="-0.1717249751091003"/>
+            <PCA_DIM pc1="-0.2628996968269348" pc2="-0.3419564962387085"/>
+            <PCA_DIM pc1="-0.271855890750885" pc2="-0.3730907142162323"/>
+            <PCA_DIM pc1="-0.2552148699760437" pc2="-0.2758651077747345"/>
+            <PCA_DIM pc1="-0.2319443225860596" pc2="-0.1679035425186157"/>
+            <PCA_DIM pc1="-0.2172285169363022" pc2="-0.1084202975034714"/>
+            <PCA_DIM pc1="-0.209743320941925" pc2="-0.07695814967155457"/>
+            <PCA_DIM pc1="-0.2028518915176392" pc2="-0.04606035724282265"/>
+            <PCA_DIM pc1="-0.1944413036108017" pc2="-0.01239516213536263"/>
+            <PCA_DIM pc1="-0.1858994364738464" pc2="0.01833754405379295"/>
+            <PCA_DIM pc1="-0.1777305752038956" pc2="0.04489178210496902"/>
+            <PCA_DIM pc1="-0.1696115136146545" pc2="0.06851571798324585"/>
+            <PCA_DIM pc1="-0.1621449291706085" pc2="0.08917777985334396"/>
+            <PCA_DIM pc1="-0.1551430225372314" pc2="0.106609046459198"/>
+            <PCA_DIM pc1="-0.1473018229007721" pc2="0.1214224845170975"/>
+            <PCA_DIM pc1="-0.1383103430271149" pc2="0.1341861337423325"/>
+            <PCA_DIM pc1="-0.129333883523941" pc2="0.1452322751283646"/>
+            <PCA_DIM pc1="-0.1218516230583191" pc2="0.1548137664794922"/>
+            <PCA_DIM pc1="-0.1154109537601471" pc2="0.1626110970973969"/>
+            <PCA_DIM pc1="-0.1082848235964775" pc2="0.1683446019887924"/>
+            <PCA_DIM pc1="-0.1008464321494102" pc2="0.1728327721357346"/>
+            <PCA_DIM pc1="-0.09451393038034439" pc2="0.1769411414861679"/>
+            <PCA_DIM pc1="-0.08904174715280533" pc2="0.1801085919141769"/>
+            <PCA_DIM pc1="-0.08314081281423569" pc2="0.1815123707056046"/>
+            <PCA_DIM pc1="-0.07638078182935715" pc2="0.1812994033098221"/>
+            <PCA_DIM pc1="-0.06974832713603973" pc2="0.1802544891834259"/>
+            <PCA_DIM pc1="-0.06359250843524933" pc2="0.1787960380315781"/>
+            <PCA_DIM pc1="-0.05730979889631271" pc2="0.1765720844268799"/>
+            <PCA_DIM pc1="-0.05140595883131027" pc2="0.1737728863954544"/>
+            <PCA_DIM pc1="-0.04636690393090248" pc2="0.1709024012088776"/>
+            <PCA_DIM pc1="-0.04097549989819527" pc2="0.1672830283641815"/>
+            <PCA_DIM pc1="-0.03443678840994835" pc2="0.1621241569519043"/>
+            <PCA_DIM pc1="-0.02781821973621845" pc2="0.1561959683895111"/>
+          </PCA>
+          <BOXES/>
+        </ELECTRODE>
+        <ELECTRODE name="Electrode 4" stream_name="Rhythm Data-B" source_node_id="120"
+                   selectedUnit="-1" selectedBox="-1">
+          <PLOT stream_source="110" stream_name="Rhythm Data-B" spike_source="120"
+                name="Electrode 4">
+            <AXIS thresh="0.0" range="250.0"/>
+          </PLOT>
+          <PCA numChannels="1" waveformLength="40" pc1min="-10792.197265625"
+               pc2min="-8679.8984375" pc1max="17713.109375" pc2max="12019.921875">
+            <PCA_DIM pc1="-0.154729425907135" pc2="0.0761578306555748"/>
+            <PCA_DIM pc1="-0.1594025939702988" pc2="0.08101501315832138"/>
+            <PCA_DIM pc1="-0.1627193093299866" pc2="0.08444119989871979"/>
+            <PCA_DIM pc1="-0.1666820645332336" pc2="0.08644602447748184"/>
+            <PCA_DIM pc1="-0.1731387376785278" pc2="0.08405917882919312"/>
+            <PCA_DIM pc1="-0.1807279586791992" pc2="0.07341553270816803"/>
+            <PCA_DIM pc1="-0.1901193410158157" pc2="0.04634410515427589"/>
+            <PCA_DIM pc1="-0.2086914032697678" pc2="-0.03594765439629555"/>
+            <PCA_DIM pc1="-0.2379261255264282" pc2="-0.1952765434980392"/>
+            <PCA_DIM pc1="-0.2583338022232056" pc2="-0.3320947587490082"/>
+            <PCA_DIM pc1="-0.2526089251041412" pc2="-0.3307035267353058"/>
+            <PCA_DIM pc1="-0.2334511280059814" pc2="-0.2383416146039963"/>
+            <PCA_DIM pc1="-0.2207880169153214" pc2="-0.1672636717557907"/>
+            <PCA_DIM pc1="-0.2150310426950455" pc2="-0.1376988291740417"/>
+            <PCA_DIM pc1="-0.2083969861268997" pc2="-0.1124717965722084"/>
+            <PCA_DIM pc1="-0.1998483091592789" pc2="-0.07520396262407303"/>
+            <PCA_DIM pc1="-0.1917460709810257" pc2="-0.0347442738711834"/>
+            <PCA_DIM pc1="-0.183783158659935" pc2="0.000427785882493481"/>
+            <PCA_DIM pc1="-0.1751835197210312" pc2="0.02992357686161995"/>
+            <PCA_DIM pc1="-0.1673647165298462" pc2="0.05554310232400894"/>
+            <PCA_DIM pc1="-0.1611874848604202" pc2="0.07779604196548462"/>
+            <PCA_DIM pc1="-0.1547031849622726" pc2="0.09712247550487518"/>
+            <PCA_DIM pc1="-0.1463322937488556" pc2="0.114263042807579"/>
+            <PCA_DIM pc1="-0.1377810537815094" pc2="0.1294768303632736"/>
+            <PCA_DIM pc1="-0.1304237395524979" pc2="0.1430118083953857"/>
+            <PCA_DIM pc1="-0.1225856021046638" pc2="0.1543766111135483"/>
+            <PCA_DIM pc1="-0.1136249378323555" pc2="0.163410872220993"/>
+            <PCA_DIM pc1="-0.105807863175869" pc2="0.171588271856308"/>
+            <PCA_DIM pc1="-0.1001845151185989" pc2="0.1792211383581161"/>
+            <PCA_DIM pc1="-0.09474126994609833" pc2="0.1846914291381836"/>
+            <PCA_DIM pc1="-0.08785184472799301" pc2="0.1874825209379196"/>
+            <PCA_DIM pc1="-0.08126392215490341" pc2="0.1897495687007904"/>
+            <PCA_DIM pc1="-0.07616729289293289" pc2="0.1925691366195679"/>
+            <PCA_DIM pc1="-0.07021050155162811" pc2="0.1941703706979752"/>
+            <PCA_DIM pc1="-0.06257721781730652" pc2="0.1939072608947754"/>
+            <PCA_DIM pc1="-0.05569886416196823" pc2="0.1928596943616867"/>
+            <PCA_DIM pc1="-0.05053948238492012" pc2="0.191516250371933"/>
+            <PCA_DIM pc1="-0.045150987803936" pc2="0.1891446560621262"/>
+            <PCA_DIM pc1="-0.03890405967831612" pc2="0.1852385699748993"/>
+            <PCA_DIM pc1="-0.03396701067686081" pc2="0.1806821078062057"/>
+          </PCA>
+          <BOXES/>
+        </ELECTRODE>
+        <ELECTRODE name="Electrode 5" stream_name="Rhythm Data-B" source_node_id="120"
+                   selectedUnit="-1" selectedBox="-1">
+          <PLOT stream_source="110" stream_name="Rhythm Data-B" spike_source="120"
+                name="Electrode 5">
+            <AXIS thresh="0.0" range="250.0"/>
+          </PLOT>
+          <PCA numChannels="1" waveformLength="40" pc1min="-10652.5673828125"
+               pc2min="-5744.91259765625" pc1max="18169.751953125" pc2max="8338.701171875">
+            <PCA_DIM pc1="-0.1590021103620529" pc2="0.02371862716972828"/>
+            <PCA_DIM pc1="-0.1647212356328964" pc2="0.02894704230129719"/>
+            <PCA_DIM pc1="-0.1677981168031693" pc2="0.03327054902911186"/>
+            <PCA_DIM pc1="-0.1709878444671631" pc2="0.03686298429965973"/>
+            <PCA_DIM pc1="-0.1768185198307037" pc2="0.03845587372779846"/>
+            <PCA_DIM pc1="-0.1835907250642776" pc2="0.03109450824558735"/>
+            <PCA_DIM pc1="-0.1918875128030777" pc2="-0.005988861434161663"/>
+            <PCA_DIM pc1="-0.208813339471817" pc2="-0.1197848618030548"/>
+            <PCA_DIM pc1="-0.2318881750106812" pc2="-0.2849763333797455"/>
+            <PCA_DIM pc1="-0.2416045963764191" pc2="-0.3563700318336487"/>
+            <PCA_DIM pc1="-0.2309480905532837" pc2="-0.2888849675655365"/>
+            <PCA_DIM pc1="-0.2164940237998962" pc2="-0.1992235034704208"/>
+            <PCA_DIM pc1="-0.2099478840827942" pc2="-0.1588714718818665"/>
+            <PCA_DIM pc1="-0.2060214579105377" pc2="-0.1383717358112335"/>
+            <PCA_DIM pc1="-0.1983917504549026" pc2="-0.1047309339046478"/>
+            <PCA_DIM pc1="-0.1901305764913559" pc2="-0.06113773211836815"/>
+            <PCA_DIM pc1="-0.185321718454361" pc2="-0.02076740190386772"/>
+            <PCA_DIM pc1="-0.1812200993299484" pc2="0.0126124294474721"/>
+            <PCA_DIM pc1="-0.174986943602562" pc2="0.04147849604487419"/>
+            <PCA_DIM pc1="-0.1689272075891495" pc2="0.06724036484956741"/>
+            <PCA_DIM pc1="-0.1647193133831024" pc2="0.08923342823982239"/>
+            <PCA_DIM pc1="-0.1598351299762726" pc2="0.1076598986983299"/>
+            <PCA_DIM pc1="-0.1524403095245361" pc2="0.1234863549470901"/>
+            <PCA_DIM pc1="-0.1452428549528122" pc2="0.1370580643415451"/>
+            <PCA_DIM pc1="-0.1399663835763931" pc2="0.1488803625106812"/>
+            <PCA_DIM pc1="-0.1334875375032425" pc2="0.1590026468038559"/>
+            <PCA_DIM pc1="-0.1244164407253265" pc2="0.1673134416341782"/>
+            <PCA_DIM pc1="-0.1165001168847084" pc2="0.1748690456151962"/>
+            <PCA_DIM pc1="-0.1119828224182129" pc2="0.1818534284830093"/>
+            <PCA_DIM pc1="-0.1076737344264984" pc2="0.1867630779743195"/>
+            <PCA_DIM pc1="-0.1006941944360733" pc2="0.1891841888427734"/>
+            <PCA_DIM pc1="-0.09336720407009125" pc2="0.1907338947057724"/>
+            <PCA_DIM pc1="-0.08837677538394928" pc2="0.1922954916954041"/>
+            <PCA_DIM pc1="-0.08351778239011765" pc2="0.1926678419113159"/>
+            <PCA_DIM pc1="-0.07652619481086731" pc2="0.1913830786943436"/>
+            <PCA_DIM pc1="-0.06951611489057541" pc2="0.1897722482681274"/>
+            <PCA_DIM pc1="-0.06401988118886948" pc2="0.1885226368904114"/>
+            <PCA_DIM pc1="-0.0580635666847229" pc2="0.18663489818573"/>
+            <PCA_DIM pc1="-0.05096270889043808" pc2="0.182974636554718"/>
+            <PCA_DIM pc1="-0.04546014592051506" pc2="0.1780495494604111"/>
+          </PCA>
+          <BOXES/>
+        </ELECTRODE>
+        <ELECTRODE name="Electrode 6" stream_name="Rhythm Data-B" source_node_id="120"
+                   selectedUnit="-1" selectedBox="-1">
+          <PLOT stream_source="110" stream_name="Rhythm Data-B" spike_source="120"
+                name="Electrode 6">
+            <AXIS thresh="0.0" range="250.0"/>
+          </PLOT>
+          <PCA numChannels="1" waveformLength="40" pc1min="-10583.2216796875"
+               pc2min="-9340.7138671875" pc1max="18056.744140625" pc2max="12757.96484375">
+            <PCA_DIM pc1="-0.1563406586647034" pc2="0.06191937997937202"/>
+            <PCA_DIM pc1="-0.1608229428529739" pc2="0.06765944510698318"/>
+            <PCA_DIM pc1="-0.1629544496536255" pc2="0.07209828495979309"/>
+            <PCA_DIM pc1="-0.1660537868738174" pc2="0.07598540186882019"/>
+            <PCA_DIM pc1="-0.1715439707040787" pc2="0.07891952991485596"/>
+            <PCA_DIM pc1="-0.177464485168457" pc2="0.07643716037273407"/>
+            <PCA_DIM pc1="-0.1855498701334" pc2="0.05199464783072472"/>
+            <PCA_DIM pc1="-0.2044088393449783" pc2="-0.03904455900192261"/>
+            <PCA_DIM pc1="-0.234668493270874" pc2="-0.2096854150295258"/>
+            <PCA_DIM pc1="-0.255422979593277" pc2="-0.3481324315071106"/>
+            <PCA_DIM pc1="-0.2498046904802322" pc2="-0.3403058648109436"/>
+            <PCA_DIM pc1="-0.2311454862356186" pc2="-0.2425304055213928"/>
+            <PCA_DIM pc1="-0.2184958159923553" pc2="-0.168499618768692"/>
+            <PCA_DIM pc1="-0.2115194499492645" pc2="-0.1356090307235718"/>
+            <PCA_DIM pc1="-0.2036036998033524" pc2="-0.1078911796212196"/>
+            <PCA_DIM pc1="-0.195647805929184" pc2="-0.07068859040737152"/>
+            <PCA_DIM pc1="-0.1899766027927399" pc2="-0.03189314529299736"/>
+            <PCA_DIM pc1="-0.1843047291040421" pc2="0.001402057940140367"/>
+            <PCA_DIM pc1="-0.1766806244850159" pc2="0.02976472489535809"/>
+            <PCA_DIM pc1="-0.169221043586731" pc2="0.05560660362243652"/>
+            <PCA_DIM pc1="-0.1633590757846832" pc2="0.07886789739131927"/>
+            <PCA_DIM pc1="-0.1569926738739014" pc2="0.09849318861961365"/>
+            <PCA_DIM pc1="-0.1491029858589172" pc2="0.1148466616868973"/>
+            <PCA_DIM pc1="-0.1416776925325394" pc2="0.1292205303907394"/>
+            <PCA_DIM pc1="-0.135163888335228" pc2="0.1422433853149414"/>
+            <PCA_DIM pc1="-0.1273459643125534" pc2="0.1531348079442978"/>
+            <PCA_DIM pc1="-0.1182080060243607" pc2="0.1614794433116913"/>
+            <PCA_DIM pc1="-0.1108753308653831" pc2="0.1685519218444824"/>
+            <PCA_DIM pc1="-0.1058726832270622" pc2="0.1753150522708893"/>
+            <PCA_DIM pc1="-0.09967266768217087" pc2="0.1812272220849991"/>
+            <PCA_DIM pc1="-0.09133501350879669" pc2="0.1856269091367722"/>
+            <PCA_DIM pc1="-0.08437352627515793" pc2="0.1888930797576904"/>
+            <PCA_DIM pc1="-0.07999292761087418" pc2="0.1913237720727921"/>
+            <PCA_DIM pc1="-0.07496413588523865" pc2="0.1919181495904922"/>
+            <PCA_DIM pc1="-0.06782474368810654" pc2="0.1905273646116257"/>
+            <PCA_DIM pc1="-0.06103856489062309" pc2="0.1887117177248001"/>
+            <PCA_DIM pc1="-0.0556948259472847" pc2="0.1871025562286377"/>
+            <PCA_DIM pc1="-0.04991022869944572" pc2="0.1847983598709106"/>
+            <PCA_DIM pc1="-0.04305014759302139" pc2="0.1811182647943497"/>
+            <PCA_DIM pc1="-0.03718119859695435" pc2="0.1763563454151154"/>
+          </PCA>
+          <BOXES/>
+        </ELECTRODE>
+        <ELECTRODE name="Electrode 7" stream_name="Rhythm Data-B" source_node_id="120"
+                   selectedUnit="-1" selectedBox="-1">
+          <PLOT stream_source="110" stream_name="Rhythm Data-B" spike_source="120"
+                name="Electrode 7">
+            <AXIS thresh="0.0" range="250.0"/>
+          </PLOT>
+          <PCA numChannels="1" waveformLength="40" pc1min="-10653.9072265625"
+               pc2min="-8830.294921875" pc1max="17781.27734375" pc2max="12555.953125">
+            <PCA_DIM pc1="-0.159087210893631" pc2="0.05088347196578979"/>
+            <PCA_DIM pc1="-0.1638631820678711" pc2="0.05593628063797951"/>
+            <PCA_DIM pc1="-0.1675105541944504" pc2="0.0608263798058033"/>
+            <PCA_DIM pc1="-0.1718865931034088" pc2="0.0655537024140358"/>
+            <PCA_DIM pc1="-0.1774693727493286" pc2="0.06916621327400208"/>
+            <PCA_DIM pc1="-0.1850539445877075" pc2="0.0541609488427639"/>
+            <PCA_DIM pc1="-0.2002997398376465" pc2="-0.03283683583140373"/>
+            <PCA_DIM pc1="-0.2271075993776321" pc2="-0.2122792154550552"/>
+            <PCA_DIM pc1="-0.2529047131538391" pc2="-0.3715667128562927"/>
+            <PCA_DIM pc1="-0.2574645578861237" pc2="-0.3773956298828125"/>
+            <PCA_DIM pc1="-0.2404743731021881" pc2="-0.2630307376384735"/>
+            <PCA_DIM pc1="-0.2212840467691422" pc2="-0.155356377363205"/>
+            <PCA_DIM pc1="-0.2113957852125168" pc2="-0.1036315187811852"/>
+            <PCA_DIM pc1="-0.2058995068073273" pc2="-0.07760763913393021"/>
+            <PCA_DIM pc1="-0.1987770348787308" pc2="-0.04867305606603622"/>
+            <PCA_DIM pc1="-0.1906092315912247" pc2="-0.01524748001247644"/>
+            <PCA_DIM pc1="-0.1835098117589951" pc2="0.01622796803712845"/>
+            <PCA_DIM pc1="-0.1771698445081711" pc2="0.04307980090379715"/>
+            <PCA_DIM pc1="-0.1705270856618881" pc2="0.06520981341600418"/>
+            <PCA_DIM pc1="-0.1639703810214996" pc2="0.0836554616689682"/>
+            <PCA_DIM pc1="-0.1579833775758743" pc2="0.09993895888328552"/>
+            <PCA_DIM pc1="-0.1516575962305069" pc2="0.1145637407898903"/>
+            <PCA_DIM pc1="-0.1445722430944443" pc2="0.1274625211954117"/>
+            <PCA_DIM pc1="-0.1377836167812347" pc2="0.1390812546014786"/>
+            <PCA_DIM pc1="-0.1313088536262512" pc2="0.1491268426179886"/>
+            <PCA_DIM pc1="-0.1239842921495438" pc2="0.1566451489925385"/>
+            <PCA_DIM pc1="-0.1160278245806694" pc2="0.1623299866914749"/>
+            <PCA_DIM pc1="-0.1090793609619141" pc2="0.1680082529783249"/>
+            <PCA_DIM pc1="-0.1038442254066467" pc2="0.173626109957695"/>
+            <PCA_DIM pc1="-0.09869321435689926" pc2="0.1775055378675461"/>
+            <PCA_DIM pc1="-0.09205623716115952" pc2="0.1793334782123566"/>
+            <PCA_DIM pc1="-0.08508993685245514" pc2="0.1802016943693161"/>
+            <PCA_DIM pc1="-0.07917466014623642" pc2="0.18041031062603"/>
+            <PCA_DIM pc1="-0.07352779060602188" pc2="0.1795972585678101"/>
+            <PCA_DIM pc1="-0.06729818880558014" pc2="0.1778507828712463"/>
+            <PCA_DIM pc1="-0.06131678074598312" pc2="0.1757341176271439"/>
+            <PCA_DIM pc1="-0.05634996294975281" pc2="0.1734377294778824"/>
+            <PCA_DIM pc1="-0.05153931677341461" pc2="0.1701841950416565"/>
+            <PCA_DIM pc1="-0.04649149626493454" pc2="0.1655895560979843"/>
+            <PCA_DIM pc1="-0.04220834001898766" pc2="0.1604950726032257"/>
+          </PCA>
+          <BOXES/>
+        </ELECTRODE>
+        <ELECTRODE name="Electrode 8" stream_name="Rhythm Data-B" source_node_id="120"
+                   selectedUnit="-1" selectedBox="-1">
+          <PLOT stream_source="110" stream_name="Rhythm Data-B" spike_source="120"
+                name="Electrode 8">
+            <AXIS thresh="0.0" range="250.0"/>
+          </PLOT>
+          <PCA numChannels="1" waveformLength="40" pc1min="-2086.115966796875"
+               pc2min="-1656.934692382813" pc1max="3469.943115234375" pc2max="1641.058959960938">
+            <PCA_DIM pc1="-0.1472386121749878" pc2="0.1681519448757172"/>
+            <PCA_DIM pc1="-0.1517569869756699" pc2="0.15798220038414"/>
+            <PCA_DIM pc1="-0.1577308177947998" pc2="0.1502941101789474"/>
+            <PCA_DIM pc1="-0.1652640551328659" pc2="0.1461123079061508"/>
+            <PCA_DIM pc1="-0.1733238697052002" pc2="0.1448577642440796"/>
+            <PCA_DIM pc1="-0.1817833930253983" pc2="0.142729327082634"/>
+            <PCA_DIM pc1="-0.1943695992231369" pc2="0.1385422646999359"/>
+            <PCA_DIM pc1="-0.2143455892801285" pc2="0.1351766586303711"/>
+            <PCA_DIM pc1="-0.2364119589328766" pc2="0.1350556612014771"/>
+            <PCA_DIM pc1="-0.2465449273586273" pc2="0.1347320973873138"/>
+            <PCA_DIM pc1="-0.2367257326841354" pc2="0.1259099096059799"/>
+            <PCA_DIM pc1="-0.2176277637481689" pc2="0.1083210930228233"/>
+            <PCA_DIM pc1="-0.2041585445404053" pc2="0.09051430225372314"/>
+            <PCA_DIM pc1="-0.1980721801519394" pc2="0.07493185997009277"/>
+            <PCA_DIM pc1="-0.1935654878616333" pc2="0.05761497095227242"/>
+            <PCA_DIM pc1="-0.1879673004150391" pc2="0.03911985829472542"/>
+            <PCA_DIM pc1="-0.182735413312912" pc2="0.02055110037326813"/>
+            <PCA_DIM pc1="-0.178465723991394" pc2="-0.0008449727902188897"/>
+            <PCA_DIM pc1="-0.1736683398485184" pc2="-0.02597128786146641"/>
+            <PCA_DIM pc1="-0.1686715632677078" pc2="-0.0513576902449131"/>
+            <PCA_DIM pc1="-0.1647586822509766" pc2="-0.07217519730329514"/>
+            <PCA_DIM pc1="-0.1612118482589722" pc2="-0.08751390874385834"/>
+            <PCA_DIM pc1="-0.1563708633184433" pc2="-0.1019032001495361"/>
+            <PCA_DIM pc1="-0.150117889046669" pc2="-0.1203799396753311"/>
+            <PCA_DIM pc1="-0.1437588632106781" pc2="-0.1424172073602676"/>
+            <PCA_DIM pc1="-0.1371304839849472" pc2="-0.1617256551980972"/>
+            <PCA_DIM pc1="-0.1294773817062378" pc2="-0.1741331219673157"/>
+            <PCA_DIM pc1="-0.1219953298568726" pc2="-0.1832885146141052"/>
+            <PCA_DIM pc1="-0.11583361774683" pc2="-0.1944905817508698"/>
+            <PCA_DIM pc1="-0.1099908798933029" pc2="-0.207137256860733"/>
+            <PCA_DIM pc1="-0.1036036908626556" pc2="-0.2168449461460114"/>
+            <PCA_DIM pc1="-0.09788066893815994" pc2="-0.2192282378673553"/>
+            <PCA_DIM pc1="-0.09312389045953751" pc2="-0.2158792614936829"/>
+            <PCA_DIM pc1="-0.08747269213199615" pc2="-0.2163527309894562"/>
+            <PCA_DIM pc1="-0.08028118312358856" pc2="-0.2237143218517303"/>
+            <PCA_DIM pc1="-0.0732220858335495" pc2="-0.2310399115085602"/>
+            <PCA_DIM pc1="-0.06725791096687317" pc2="-0.2339027374982834"/>
+            <PCA_DIM pc1="-0.06094053015112877" pc2="-0.2342780828475952"/>
+            <PCA_DIM pc1="-0.05396510288119316" pc2="-0.2336785495281219"/>
+            <PCA_DIM pc1="-0.0479368194937706" pc2="-0.2295198887586594"/>
+          </PCA>
+          <BOXES/>
+        </ELECTRODE>
+        <ELECTRODE name="Electrode 9" stream_name="Rhythm Data-B" source_node_id="120"
+                   selectedUnit="-1" selectedBox="-1">
+          <PLOT stream_source="110" stream_name="Rhythm Data-B" spike_source="120"
+                name="Electrode 9">
+            <AXIS thresh="0.0" range="250.0"/>
+          </PLOT>
+          <PCA numChannels="1" waveformLength="40" pc1min="-2224.428955078125"
+               pc2min="-5112.4404296875" pc1max="3709.01171875" pc2max="3671.0361328125">
+            <PCA_DIM pc1="-0.1459073126316071" pc2="0.002569559030234814"/>
+            <PCA_DIM pc1="-0.1526195853948593" pc2="-0.003947637975215912"/>
+            <PCA_DIM pc1="-0.1589918583631516" pc2="-0.008512119762599468"/>
+            <PCA_DIM pc1="-0.1621182709932327" pc2="-0.01098843198269606"/>
+            <PCA_DIM pc1="-0.1637721359729767" pc2="-0.005496330093592405"/>
+            <PCA_DIM pc1="-0.1681460589170456" pc2="0.02627300098538399"/>
+            <PCA_DIM pc1="-0.1823229044675827" pc2="0.08967428654432297"/>
+            <PCA_DIM pc1="-0.2140133678913116" pc2="0.1577531695365906"/>
+            <PCA_DIM pc1="-0.2549940049648285" pc2="0.2006785869598389"/>
+            <PCA_DIM pc1="-0.2744434773921967" pc2="0.2151587158441544"/>
+            <PCA_DIM pc1="-0.2536105811595917" pc2="0.2123089879751205"/>
+            <PCA_DIM pc1="-0.2154276669025421" pc2="0.199327826499939"/>
+            <PCA_DIM pc1="-0.1925860941410065" pc2="0.1771184802055359"/>
+            <PCA_DIM pc1="-0.1890359371900558" pc2="0.1463708728551865"/>
+            <PCA_DIM pc1="-0.19007807970047" pc2="0.1122511401772499"/>
+            <PCA_DIM pc1="-0.1869001239538193" pc2="0.07893060892820358"/>
+            <PCA_DIM pc1="-0.1804216206073761" pc2="0.04696584492921829"/>
+            <PCA_DIM pc1="-0.1739135980606079" pc2="0.01762174814939499"/>
+            <PCA_DIM pc1="-0.169489398598671" pc2="-0.009257355704903603"/>
+            <PCA_DIM pc1="-0.1675719916820526" pc2="-0.03591921553015709"/>
+            <PCA_DIM pc1="-0.1664737313985825" pc2="-0.06217363476753235"/>
+            <PCA_DIM pc1="-0.1628879308700562" pc2="-0.08633094280958176"/>
+            <PCA_DIM pc1="-0.1555437445640564" pc2="-0.108618937432766"/>
+            <PCA_DIM pc1="-0.1471107304096222" pc2="-0.1289766430854797"/>
+            <PCA_DIM pc1="-0.1401906907558441" pc2="-0.145314484834671"/>
+            <PCA_DIM pc1="-0.1343246251344681" pc2="-0.1581570953130722"/>
+            <PCA_DIM pc1="-0.1280002593994141" pc2="-0.1709025502204895"/>
+            <PCA_DIM pc1="-0.1211284622550011" pc2="-0.1843500584363937"/>
+            <PCA_DIM pc1="-0.1149472519755363" pc2="-0.196137472987175"/>
+            <PCA_DIM pc1="-0.10935228317976" pc2="-0.2047818005084991"/>
+            <PCA_DIM pc1="-0.1033237427473068" pc2="-0.2113402634859085"/>
+            <PCA_DIM pc1="-0.09750154614448547" pc2="-0.2165386527776718"/>
+            <PCA_DIM pc1="-0.09201773256063461" pc2="-0.2198171764612198"/>
+            <PCA_DIM pc1="-0.08562803268432617" pc2="-0.2210232019424438"/>
+            <PCA_DIM pc1="-0.07829724997282028" pc2="-0.2213927209377289"/>
+            <PCA_DIM pc1="-0.0719822570681572" pc2="-0.223356768488884"/>
+            <PCA_DIM pc1="-0.06786636263132095" pc2="-0.2265080809593201"/>
+            <PCA_DIM pc1="-0.06308899819850922" pc2="-0.2273053675889969"/>
+            <PCA_DIM pc1="-0.05521278455853462" pc2="-0.224886953830719"/>
+            <PCA_DIM pc1="-0.04719997197389603" pc2="-0.2204357534646988"/>
+          </PCA>
+          <BOXES/>
+        </ELECTRODE>
+        <ELECTRODE name="Electrode 10" stream_name="Rhythm Data-B" source_node_id="120"
+                   selectedUnit="-1" selectedBox="-1">
+          <PLOT stream_source="110" stream_name="Rhythm Data-B" spike_source="120"
+                name="Electrode 10">
+            <AXIS thresh="0.0" range="500.0"/>
+          </PLOT>
+          <PCA numChannels="1" waveformLength="40" pc1min="-1676.249145507813"
+               pc2min="-1688.014770507813" pc1max="2787.48046875" pc2max="1637.093872070313">
+            <PCA_DIM pc1="-0.1349156945943832" pc2="0.1506467461585999"/>
+            <PCA_DIM pc1="-0.142373725771904" pc2="0.1461701691150665"/>
+            <PCA_DIM pc1="-0.1514483392238617" pc2="0.1406302750110626"/>
+            <PCA_DIM pc1="-0.1613519489765167" pc2="0.1387314647436142"/>
+            <PCA_DIM pc1="-0.1710469424724579" pc2="0.1389113217592239"/>
+            <PCA_DIM pc1="-0.181095764040947" pc2="0.1392740458250046"/>
+            <PCA_DIM pc1="-0.1958948969841003" pc2="0.1416980773210526"/>
+            <PCA_DIM pc1="-0.2202762216329575" pc2="0.1460801512002945"/>
+            <PCA_DIM pc1="-0.2489480078220367" pc2="0.1514329165220261"/>
+            <PCA_DIM pc1="-0.2635601162910461" pc2="0.1528134196996689"/>
+            <PCA_DIM pc1="-0.2516914904117584" pc2="0.1396698802709579"/>
+            <PCA_DIM pc1="-0.2248072475194931" pc2="0.1123728007078171"/>
+            <PCA_DIM pc1="-0.2037097066640854" pc2="0.08575329184532166"/>
+            <PCA_DIM pc1="-0.1938992738723755" pc2="0.06837861239910126"/>
+            <PCA_DIM pc1="-0.1881981194019318" pc2="0.05292721837759018"/>
+            <PCA_DIM pc1="-0.1826233714818954" pc2="0.03242791444063187"/>
+            <PCA_DIM pc1="-0.1788151562213898" pc2="0.01097351685166359"/>
+            <PCA_DIM pc1="-0.1761715710163116" pc2="-0.008286234922707081"/>
+            <PCA_DIM pc1="-0.1708207279443741" pc2="-0.02759702317416668"/>
+            <PCA_DIM pc1="-0.1628414690494537" pc2="-0.04596458747982979"/>
+            <PCA_DIM pc1="-0.1561289280653" pc2="-0.0610726960003376"/>
+            <PCA_DIM pc1="-0.1513285338878632" pc2="-0.07529546320438385"/>
+            <PCA_DIM pc1="-0.1459750831127167" pc2="-0.09400955587625504"/>
+            <PCA_DIM pc1="-0.1405145525932312" pc2="-0.1169575825333595"/>
+            <PCA_DIM pc1="-0.1367594301700592" pc2="-0.1351636499166489"/>
+            <PCA_DIM pc1="-0.132641926407814" pc2="-0.1449205726385117"/>
+            <PCA_DIM pc1="-0.1257854402065277" pc2="-0.1543940156698227"/>
+            <PCA_DIM pc1="-0.1179064586758614" pc2="-0.1703488528728485"/>
+            <PCA_DIM pc1="-0.1113639622926712" pc2="-0.1907274276018143"/>
+            <PCA_DIM pc1="-0.1065430492162704" pc2="-0.208580419421196"/>
+            <PCA_DIM pc1="-0.102912150323391" pc2="-0.2205475866794586"/>
+            <PCA_DIM pc1="-0.09975947439670563" pc2="-0.2274898141622543"/>
+            <PCA_DIM pc1="-0.09706753492355347" pc2="-0.2282697856426239"/>
+            <PCA_DIM pc1="-0.09438223391771317" pc2="-0.226894274353981"/>
+            <PCA_DIM pc1="-0.09014638513326645" pc2="-0.2302261590957642"/>
+            <PCA_DIM pc1="-0.08459650725126266" pc2="-0.2357493937015533"/>
+            <PCA_DIM pc1="-0.07879126071929932" pc2="-0.2387363165616989"/>
+            <PCA_DIM pc1="-0.07213595509529114" pc2="-0.2387786507606506"/>
+            <PCA_DIM pc1="-0.06560804694890976" pc2="-0.2360990792512894"/>
+            <PCA_DIM pc1="-0.06109433248639107" pc2="-0.2306479960680008"/>
+          </PCA>
+          <BOXES/>
+        </ELECTRODE>
+        <ELECTRODE name="Electrode 11" stream_name="Rhythm Data-B" source_node_id="120"
+                   selectedUnit="-1" selectedBox="-1">
+          <PLOT stream_source="110" stream_name="Rhythm Data-B" spike_source="120"
+                name="Electrode 11">
+            <AXIS thresh="0.0" range="250.0"/>
+          </PLOT>
+          <PCA numChannels="1" waveformLength="40" pc1min="-13089.7236328125"
+               pc2min="-17940.916015625" pc1max="21852.3046875" pc2max="21620.234375">
+            <PCA_DIM pc1="-0.1270249336957932" pc2="0.1399183422327042"/>
+            <PCA_DIM pc1="-0.1307911574840546" pc2="0.1476843059062958"/>
+            <PCA_DIM pc1="-0.133910670876503" pc2="0.1542331427335739"/>
+            <PCA_DIM pc1="-0.1366512924432755" pc2="0.1594204753637314"/>
+            <PCA_DIM pc1="-0.1405759304761887" pc2="0.1585641950368881"/>
+            <PCA_DIM pc1="-0.1515253484249115" pc2="0.1330069303512573"/>
+            <PCA_DIM pc1="-0.1818412989377975" pc2="0.05686803162097931"/>
+            <PCA_DIM pc1="-0.2392646074295044" pc2="-0.07743647694587708"/>
+            <PCA_DIM pc1="-0.303767055273056" pc2="-0.2252529114484787"/>
+            <PCA_DIM pc1="-0.3337103426456451" pc2="-0.2939915657043457"/>
+            <PCA_DIM pc1="-0.3147337436676025" pc2="-0.2423373758792877"/>
+            <PCA_DIM pc1="-0.2767826020717621" pc2="-0.1392965018749237"/>
+            <PCA_DIM pc1="-0.2504369020462036" pc2="-0.06689988076686859"/>
+            <PCA_DIM pc1="-0.237323597073555" pc2="-0.03407714888453484"/>
+            <PCA_DIM pc1="-0.2259139567613602" pc2="-0.01164092496037483"/>
+            <PCA_DIM pc1="-0.211079403758049" pc2="0.01512920390814543"/>
+            <PCA_DIM pc1="-0.1947375982999802" pc2="0.04325335472822189"/>
+            <PCA_DIM pc1="-0.1792163401842117" pc2="0.06801587343215942"/>
+            <PCA_DIM pc1="-0.1646610498428345" pc2="0.0888662114739418"/>
+            <PCA_DIM pc1="-0.1504880487918854" pc2="0.1068296581506729"/>
+            <PCA_DIM pc1="-0.1367782950401306" pc2="0.1225671991705894"/>
+            <PCA_DIM pc1="-0.1235990300774574" pc2="0.1364721208810806"/>
+            <PCA_DIM pc1="-0.1106879860162735" pc2="0.1486397683620453"/>
+            <PCA_DIM pc1="-0.09841121733188629" pc2="0.1591344028711319"/>
+            <PCA_DIM pc1="-0.08708237856626511" pc2="0.168065071105957"/>
+            <PCA_DIM pc1="-0.07623628526926041" pc2="0.1752308309078217"/>
+            <PCA_DIM pc1="-0.0658467635512352" pc2="0.1808258444070816"/>
+            <PCA_DIM pc1="-0.05636157467961311" pc2="0.185248002409935"/>
+            <PCA_DIM pc1="-0.04778872802853584" pc2="0.1884794384241104"/>
+            <PCA_DIM pc1="-0.03967311978340149" pc2="0.1904635578393936"/>
+            <PCA_DIM pc1="-0.03161175921559334" pc2="0.1911580413579941"/>
+            <PCA_DIM pc1="-0.02390775270760059" pc2="0.1908075660467148"/>
+            <PCA_DIM pc1="-0.01687080785632133" pc2="0.1898831278085709"/>
+            <PCA_DIM pc1="-0.01031122636049986" pc2="0.1884332746267319"/>
+            <PCA_DIM pc1="-0.004274547100067139" pc2="0.1861481070518494"/>
+            <PCA_DIM pc1="0.001079776557162404" pc2="0.1828725188970566"/>
+            <PCA_DIM pc1="0.005853703711181879" pc2="0.1789561957120895"/>
+            <PCA_DIM pc1="0.01035615336149931" pc2="0.1747953593730927"/>
+            <PCA_DIM pc1="0.01478183083236217" pc2="0.1702226847410202"/>
+            <PCA_DIM pc1="0.01875929906964302" pc2="0.1650602370500565"/>
+          </PCA>
+          <BOXES/>
+        </ELECTRODE>
+        <ELECTRODE name="Electrode 12" stream_name="Rhythm Data-B" source_node_id="120"
+                   selectedUnit="-1" selectedBox="-1">
+          <PLOT stream_source="110" stream_name="Rhythm Data-B" spike_source="120"
+                name="Electrode 12">
+            <AXIS thresh="0.0" range="250.0"/>
+          </PLOT>
+          <PCA numChannels="1" waveformLength="40" pc1min="-15103.5283203125"
+               pc2min="-18610.431640625" pc1max="25237.16796875" pc2max="20534.05078125">
+            <PCA_DIM pc1="-0.1031318083405495" pc2="0.1513206213712692"/>
+            <PCA_DIM pc1="-0.1063725501298904" pc2="0.1599449813365936"/>
+            <PCA_DIM pc1="-0.1093060299754143" pc2="0.1675373315811157"/>
+            <PCA_DIM pc1="-0.1121056005358696" pc2="0.1737718433141708"/>
+            <PCA_DIM pc1="-0.1163481995463371" pc2="0.1739810705184937"/>
+            <PCA_DIM pc1="-0.1313103884458542" pc2="0.148310512304306"/>
+            <PCA_DIM pc1="-0.1747391819953918" pc2="0.06779935210943222"/>
+            <PCA_DIM pc1="-0.2517296671867371" pc2="-0.06930757313966751"/>
+            <PCA_DIM pc1="-0.3290241658687592" pc2="-0.2044771015644073"/>
+            <PCA_DIM pc1="-0.3580140471458435" pc2="-0.251603901386261"/>
+            <PCA_DIM pc1="-0.3323090672492981" pc2="-0.1933598965406418"/>
+            <PCA_DIM pc1="-0.2899626791477203" pc2="-0.09958567470312119"/>
+            <PCA_DIM pc1="-0.2609932124614716" pc2="-0.03430783003568649"/>
+            <PCA_DIM pc1="-0.2446088343858719" pc2="-0.00141619541682303"/>
+            <PCA_DIM pc1="-0.2294953763484955" pc2="0.02237584441900253"/>
+            <PCA_DIM pc1="-0.211623951792717" pc2="0.04859782010316849"/>
+            <PCA_DIM pc1="-0.1928228586912155" pc2="0.07522079348564148"/>
+            <PCA_DIM pc1="-0.1746426075696945" pc2="0.09840647876262665"/>
+            <PCA_DIM pc1="-0.1571813970804214" pc2="0.1169639378786087"/>
+            <PCA_DIM pc1="-0.1403691172599792" pc2="0.1317473948001862"/>
+            <PCA_DIM pc1="-0.1243207082152367" pc2="0.1440485268831253"/>
+            <PCA_DIM pc1="-0.1089635342359543" pc2="0.1547621488571167"/>
+            <PCA_DIM pc1="-0.09415535628795624" pc2="0.1642563492059708"/>
+            <PCA_DIM pc1="-0.08007439970970154" pc2="0.1723566055297852"/>
+            <PCA_DIM pc1="-0.06696909666061401" pc2="0.178765669465065"/>
+            <PCA_DIM pc1="-0.05469862744212151" pc2="0.1836004704236984"/>
+            <PCA_DIM pc1="-0.04313767701387405" pc2="0.1872147619724274"/>
+            <PCA_DIM pc1="-0.03256310150027275" pc2="0.1898041516542435"/>
+            <PCA_DIM pc1="-0.02301988564431667" pc2="0.1912923604249954"/>
+            <PCA_DIM pc1="-0.01410851627588272" pc2="0.1914166212081909"/>
+            <PCA_DIM pc1="-0.005649520549923182" pc2="0.19048972427845"/>
+            <PCA_DIM pc1="0.002201321767643094" pc2="0.1893758773803711"/>
+            <PCA_DIM pc1="0.009209902957081795" pc2="0.1881021708250046"/>
+            <PCA_DIM pc1="0.01534643489867449" pc2="0.1857431381940842"/>
+            <PCA_DIM pc1="0.02087284065783024" pc2="0.1821277737617493"/>
+            <PCA_DIM pc1="0.02602090686559677" pc2="0.1779611706733704"/>
+            <PCA_DIM pc1="0.03070658259093761" pc2="0.1735482215881348"/>
+            <PCA_DIM pc1="0.03461132571101189" pc2="0.1688299775123596"/>
+            <PCA_DIM pc1="0.0377533920109272" pc2="0.1637653112411499"/>
+            <PCA_DIM pc1="0.04063484072685242" pc2="0.1583322286605835"/>
+          </PCA>
+          <BOXES/>
+        </ELECTRODE>
+        <ELECTRODE name="Electrode 13" stream_name="Rhythm Data-B" source_node_id="120"
+                   selectedUnit="-1" selectedBox="-1">
+          <PLOT stream_source="110" stream_name="Rhythm Data-B" spike_source="120"
+                name="Electrode 13">
+            <AXIS thresh="0.0" range="250.0"/>
+          </PLOT>
+          <PCA numChannels="1" waveformLength="40" pc1min="-12633.810546875"
+               pc2min="-15246.6474609375" pc1max="21193.814453125" pc2max="15440.9541015625">
+            <PCA_DIM pc1="-0.08840388059616089" pc2="0.1401291638612747"/>
+            <PCA_DIM pc1="-0.09143541753292084" pc2="0.1482953429222107"/>
+            <PCA_DIM pc1="-0.09437958151102066" pc2="0.1553338319063187"/>
+            <PCA_DIM pc1="-0.09719078242778778" pc2="0.1611310988664627"/>
+            <PCA_DIM pc1="-0.1001055166125298" pc2="0.1655186712741852"/>
+            <PCA_DIM pc1="-0.1109466478228569" pc2="0.156617283821106"/>
+            <PCA_DIM pc1="-0.1540112644433975" pc2="0.09493915736675262"/>
+            <PCA_DIM pc1="-0.240161657333374" pc2="-0.04084405675530434"/>
+            <PCA_DIM pc1="-0.3272079527378082" pc2="-0.185709148645401"/>
+            <PCA_DIM pc1="-0.3599119782447815" pc2="-0.2413742691278458"/>
+            <PCA_DIM pc1="-0.3366661369800568" pc2="-0.1919730007648468"/>
+            <PCA_DIM pc1="-0.2976548671722412" pc2="-0.1065330803394318"/>
+            <PCA_DIM pc1="-0.2701403796672821" pc2="-0.04369059950113297"/>
+            <PCA_DIM pc1="-0.2526404559612274" pc2="-0.006855219602584839"/>
+            <PCA_DIM pc1="-0.2357311993837357" pc2="0.02209573611617088"/>
+            <PCA_DIM pc1="-0.2166250646114349" pc2="0.05156341940164566"/>
+            <PCA_DIM pc1="-0.1969653218984604" pc2="0.08001946657896042"/>
+            <PCA_DIM pc1="-0.1781422644853592" pc2="0.1049934923648834"/>
+            <PCA_DIM pc1="-0.1606534719467163" pc2="0.1260565966367722"/>
+            <PCA_DIM pc1="-0.1441378593444824" pc2="0.1437336951494217"/>
+            <PCA_DIM pc1="-0.1280014365911484" pc2="0.1588070392608643"/>
+            <PCA_DIM pc1="-0.1121218055486679" pc2="0.1714432537555695"/>
+            <PCA_DIM pc1="-0.09670946002006531" pc2="0.1810435950756073"/>
+            <PCA_DIM pc1="-0.08200846612453461" pc2="0.1875257939100266"/>
+            <PCA_DIM pc1="-0.06805558502674103" pc2="0.191789373755455"/>
+            <PCA_DIM pc1="-0.05475172773003578" pc2="0.1946134120225906"/>
+            <PCA_DIM pc1="-0.04220445081591606" pc2="0.1959715038537979"/>
+            <PCA_DIM pc1="-0.03073434717953205" pc2="0.1958976089954376"/>
+            <PCA_DIM pc1="-0.02045503631234169" pc2="0.194933220744133"/>
+            <PCA_DIM pc1="-0.01106401439756155" pc2="0.1934581845998764"/>
+            <PCA_DIM pc1="-0.002238211454823613" pc2="0.1913137286901474"/>
+            <PCA_DIM pc1="0.006037242244929075" pc2="0.1882702708244324"/>
+            <PCA_DIM pc1="0.0139099108055234" pc2="0.1845951825380325"/>
+            <PCA_DIM pc1="0.021486422047019" pc2="0.1804568022489548"/>
+            <PCA_DIM pc1="0.02820583432912827" pc2="0.1757415235042572"/>
+            <PCA_DIM pc1="0.03373344987630844" pc2="0.1705779880285263"/>
+            <PCA_DIM pc1="0.03865261375904083" pc2="0.165108859539032"/>
+            <PCA_DIM pc1="0.04332135990262032" pc2="0.159345954656601"/>
+            <PCA_DIM pc1="0.04745977744460106" pc2="0.1531680226325989"/>
+            <PCA_DIM pc1="0.05101222544908524" pc2="0.1464311629533768"/>
+          </PCA>
+          <BOXES/>
+        </ELECTRODE>
+        <ELECTRODE name="Electrode 14" stream_name="Rhythm Data-B" source_node_id="120"
+                   selectedUnit="-1" selectedBox="-1">
+          <PLOT stream_source="110" stream_name="Rhythm Data-B" spike_source="120"
+                name="Electrode 14">
+            <AXIS thresh="0.0" range="250.0"/>
+          </PLOT>
+          <PCA numChannels="1" waveformLength="40" pc1min="-2414.0546875" pc2min="-986.1051635742188"
+               pc1max="4019.17041015625" pc2max="981.0267333984375">
+            <PCA_DIM pc1="-0.1448646038770676" pc2="0.2033800482749939"/>
+            <PCA_DIM pc1="-0.1482715904712677" pc2="0.1993110626935959"/>
+            <PCA_DIM pc1="-0.1538040041923523" pc2="0.1874757558107376"/>
+            <PCA_DIM pc1="-0.1604610234498978" pc2="0.1710460186004639"/>
+            <PCA_DIM pc1="-0.1659300625324249" pc2="0.1597813218832016"/>
+            <PCA_DIM pc1="-0.1688283830881119" pc2="0.1522344797849655"/>
+            <PCA_DIM pc1="-0.177568331360817" pc2="0.1406812965869904"/>
+            <PCA_DIM pc1="-0.2061310708522797" pc2="0.1303995400667191"/>
+            <PCA_DIM pc1="-0.2479299157857895" pc2="0.1297968775033951"/>
+            <PCA_DIM pc1="-0.269341915845871" pc2="0.1297840178012848"/>
+            <PCA_DIM pc1="-0.2500217854976654" pc2="0.11688332259655"/>
+            <PCA_DIM pc1="-0.2128315418958664" pc2="0.09364696592092514"/>
+            <PCA_DIM pc1="-0.1901099383831024" pc2="0.07264578342437744"/>
+            <PCA_DIM pc1="-0.1847946643829346" pc2="0.06113645434379578"/>
+            <PCA_DIM pc1="-0.1829023957252502" pc2="0.05500832945108414"/>
+            <PCA_DIM pc1="-0.1785446256399155" pc2="0.04250403121113777"/>
+            <PCA_DIM pc1="-0.174535945057869" pc2="0.02285751327872276"/>
+            <PCA_DIM pc1="-0.1721223443746567" pc2="0.006471047177910805"/>
+            <PCA_DIM pc1="-0.1691931188106537" pc2="-0.008985418826341629"/>
+            <PCA_DIM pc1="-0.1639916300773621" pc2="-0.03261628746986389"/>
+            <PCA_DIM pc1="-0.1570896953344345" pc2="-0.05775631591677666"/>
+            <PCA_DIM pc1="-0.1512566804885864" pc2="-0.07516474276781082"/>
+            <PCA_DIM pc1="-0.1473515182733536" pc2="-0.08897643536329269"/>
+            <PCA_DIM pc1="-0.1432971805334091" pc2="-0.1007953658699989"/>
+            <PCA_DIM pc1="-0.1390358805656433" pc2="-0.1092226579785347"/>
+            <PCA_DIM pc1="-0.1366015672683716" pc2="-0.1217046082019806"/>
+            <PCA_DIM pc1="-0.1357325464487076" pc2="-0.1395311653614044"/>
+            <PCA_DIM pc1="-0.1333359330892563" pc2="-0.1548010557889938"/>
+            <PCA_DIM pc1="-0.1276940107345581" pc2="-0.1688712388277054"/>
+            <PCA_DIM pc1="-0.1209587901830673" pc2="-0.185851514339447"/>
+            <PCA_DIM pc1="-0.1158678978681564" pc2="-0.200083002448082"/>
+            <PCA_DIM pc1="-0.1122717633843422" pc2="-0.2065255045890808"/>
+            <PCA_DIM pc1="-0.1083629578351974" pc2="-0.2127592861652374"/>
+            <PCA_DIM pc1="-0.1037860363721848" pc2="-0.2280250042676926"/>
+            <PCA_DIM pc1="-0.09890327602624893" pc2="-0.2453878372907639"/>
+            <PCA_DIM pc1="-0.09246035665273666" pc2="-0.2518755793571472"/>
+            <PCA_DIM pc1="-0.08461479842662811" pc2="-0.2469111680984497"/>
+            <PCA_DIM pc1="-0.07776273787021637" pc2="-0.2407995611429214"/>
+            <PCA_DIM pc1="-0.07199592888355255" pc2="-0.2401918321847916"/>
+            <PCA_DIM pc1="-0.06572460383176804" pc2="-0.2383017539978027"/>
+          </PCA>
+          <BOXES/>
+        </ELECTRODE>
+        <ELECTRODE name="Electrode 15" stream_name="Rhythm Data-B" source_node_id="120"
+                   selectedUnit="-1" selectedBox="-1">
+          <PLOT stream_source="110" stream_name="Rhythm Data-B" spike_source="120"
+                name="Electrode 15">
+            <AXIS thresh="0.0" range="250.0"/>
+          </PLOT>
+          <PCA numChannels="1" waveformLength="40" pc1min="-12495.8828125" pc2min="-15065.5078125"
+               pc1max="20886.37890625" pc2max="15231.5107421875">
+            <PCA_DIM pc1="-0.09440868347883224" pc2="0.1407022327184677"/>
+            <PCA_DIM pc1="-0.09776751697063446" pc2="0.1490342915058136"/>
+            <PCA_DIM pc1="-0.1012774407863617" pc2="0.1562341898679733"/>
+            <PCA_DIM pc1="-0.1046232208609581" pc2="0.1620390713214874"/>
+            <PCA_DIM pc1="-0.1077166274189949" pc2="0.1658100783824921"/>
+            <PCA_DIM pc1="-0.1179256960749626" pc2="0.1554043889045715"/>
+            <PCA_DIM pc1="-0.1576497852802277" pc2="0.09476466476917267"/>
+            <PCA_DIM pc1="-0.2390959411859512" pc2="-0.03657903149724007"/>
+            <PCA_DIM pc1="-0.3264164626598358" pc2="-0.1816090196371078"/>
+            <PCA_DIM pc1="-0.3627602756023407" pc2="-0.2404894977807999"/>
+            <PCA_DIM pc1="-0.339283287525177" pc2="-0.188372328877449"/>
+            <PCA_DIM pc1="-0.2975980043411255" pc2="-0.0987892672419548"/>
+            <PCA_DIM pc1="-0.2688919305801392" pc2="-0.03776486217975616"/>
+            <PCA_DIM pc1="-0.2508649230003357" pc2="-0.006016191095113754"/>
+            <PCA_DIM pc1="-0.2329870164394379" pc2="0.01937586069107056"/>
+            <PCA_DIM pc1="-0.2129721790552139" pc2="0.04745526239275932"/>
+            <PCA_DIM pc1="-0.1933255344629288" pc2="0.07560353726148605"/>
+            <PCA_DIM pc1="-0.175174668431282" pc2="0.1004898846149445"/>
+            <PCA_DIM pc1="-0.1577307879924774" pc2="0.1213496401906013"/>
+            <PCA_DIM pc1="-0.1406408548355103" pc2="0.138872891664505"/>
+            <PCA_DIM pc1="-0.1243385151028633" pc2="0.1538077294826508"/>
+            <PCA_DIM pc1="-0.108999103307724" pc2="0.1665363758802414"/>
+            <PCA_DIM pc1="-0.09431131184101105" pc2="0.176957368850708"/>
+            <PCA_DIM pc1="-0.07994042336940765" pc2="0.184908926486969"/>
+            <PCA_DIM pc1="-0.06613725423812866" pc2="0.1905981451272964"/>
+            <PCA_DIM pc1="-0.05319835245609283" pc2="0.1943566501140594"/>
+            <PCA_DIM pc1="-0.04090296849608421" pc2="0.1964761018753052"/>
+            <PCA_DIM pc1="-0.02923000603914261" pc2="0.1973356306552887"/>
+            <PCA_DIM pc1="-0.01849199086427689" pc2="0.197318971157074"/>
+            <PCA_DIM pc1="-0.008796689100563526" pc2="0.1964108645915985"/>
+            <PCA_DIM pc1="-0.00003749741517822258" pc2="0.1944234371185303"/>
+            <PCA_DIM pc1="0.008007312193512917" pc2="0.1913604736328125"/>
+            <PCA_DIM pc1="0.0155504522845149" pc2="0.1874323338270187"/>
+            <PCA_DIM pc1="0.02250046096742153" pc2="0.1832087486982346"/>
+            <PCA_DIM pc1="0.02866899594664574" pc2="0.1789466440677643"/>
+            <PCA_DIM pc1="0.03414840251207352" pc2="0.1742681711912155"/>
+            <PCA_DIM pc1="0.03883290663361549" pc2="0.1690214425325394"/>
+            <PCA_DIM pc1="0.04262668639421463" pc2="0.1634589582681656"/>
+            <PCA_DIM pc1="0.04589378833770752" pc2="0.1581764817237854"/>
+            <PCA_DIM pc1="0.04869182780385017" pc2="0.1533619612455368"/>
+          </PCA>
+          <BOXES/>
+        </ELECTRODE>
+        <ELECTRODE name="Electrode 16" stream_name="Rhythm Data-B" source_node_id="120"
+                   selectedUnit="-1" selectedBox="-1">
+          <PLOT stream_source="110" stream_name="Rhythm Data-B" spike_source="120"
+                name="Electrode 16">
+            <AXIS thresh="0.0" range="250.0"/>
+          </PLOT>
+          <PCA numChannels="1" waveformLength="40" pc1min="-10761.5341796875"
+               pc2min="-19908.21875" pc1max="17912.06640625" pc2max="18717.7421875">
+            <PCA_DIM pc1="-0.09935595095157623" pc2="0.01803258806467056"/>
+            <PCA_DIM pc1="-0.105467900633812" pc2="-0.0004745770711451769"/>
+            <PCA_DIM pc1="-0.1115278899669647" pc2="-0.01816059835255146"/>
+            <PCA_DIM pc1="-0.1165999472141266" pc2="-0.0340883806347847"/>
+            <PCA_DIM pc1="-0.1199756041169167" pc2="-0.04685758426785469"/>
+            <PCA_DIM pc1="-0.1271160393953323" pc2="-0.04507287964224815"/>
+            <PCA_DIM pc1="-0.1552618891000748" pc2="0.001382058020681143"/>
+            <PCA_DIM pc1="-0.219916969537735" pc2="0.1062433198094368"/>
+            <PCA_DIM pc1="-0.2991550266742706" pc2="0.2174686938524246"/>
+            <PCA_DIM pc1="-0.3363348543643951" pc2="0.2604371905326843"/>
+            <PCA_DIM pc1="-0.31037437915802" pc2="0.2252373993396759"/>
+            <PCA_DIM pc1="-0.2613562941551208" pc2="0.1634343564510345"/>
+            <PCA_DIM pc1="-0.2298912405967712" pc2="0.1148229315876961"/>
+            <PCA_DIM pc1="-0.2189785093069077" pc2="0.0784570500254631"/>
+            <PCA_DIM pc1="-0.2139080464839935" pc2="0.04287346079945564"/>
+            <PCA_DIM pc1="-0.2062263041734695" pc2="0.007224580738693476"/>
+            <PCA_DIM pc1="-0.1961058527231216" pc2="-0.0255446694791317"/>
+            <PCA_DIM pc1="-0.185627207159996" pc2="-0.05529378354549408"/>
+            <PCA_DIM pc1="-0.1758966147899628" pc2="-0.08224255591630936"/>
+            <PCA_DIM pc1="-0.16689532995224" pc2="-0.1054501757025719"/>
+            <PCA_DIM pc1="-0.158073827624321" pc2="-0.1242497488856316"/>
+            <PCA_DIM pc1="-0.1490766555070877" pc2="-0.1392952054738998"/>
+            <PCA_DIM pc1="-0.1397819221019745" pc2="-0.1521504819393158"/>
+            <PCA_DIM pc1="-0.1304202526807785" pc2="-0.16408571600914"/>
+            <PCA_DIM pc1="-0.1210125610232353" pc2="-0.1753038913011551"/>
+            <PCA_DIM pc1="-0.1116573959589005" pc2="-0.1856884211301804"/>
+            <PCA_DIM pc1="-0.1029195412993431" pc2="-0.1948008090257645"/>
+            <PCA_DIM pc1="-0.09457562118768692" pc2="-0.2020608484745026"/>
+            <PCA_DIM pc1="-0.0859503298997879" pc2="-0.2076741904020309"/>
+            <PCA_DIM pc1="-0.07717912644147873" pc2="-0.2117906659841537"/>
+            <PCA_DIM pc1="-0.06878212839365005" pc2="-0.2141882330179214"/>
+            <PCA_DIM pc1="-0.06115291267633438" pc2="-0.2152919769287109"/>
+            <PCA_DIM pc1="-0.05405546724796295" pc2="-0.2155341804027557"/>
+            <PCA_DIM pc1="-0.04681884869933128" pc2="-0.2145525068044662"/>
+            <PCA_DIM pc1="-0.03965488821268082" pc2="-0.212559387087822"/>
+            <PCA_DIM pc1="-0.03329367190599442" pc2="-0.2098688781261444"/>
+            <PCA_DIM pc1="-0.02805685065686703" pc2="-0.2059507071971893"/>
+            <PCA_DIM pc1="-0.0234893225133419" pc2="-0.2007757872343063"/>
+            <PCA_DIM pc1="-0.01873010396957397" pc2="-0.1949562877416611"/>
+            <PCA_DIM pc1="-0.01380963064730167" pc2="-0.1889896392822266"/>
+          </PCA>
+          <BOXES/>
+        </ELECTRODE>
+        <ELECTRODE name="Electrode 17" stream_name="Rhythm Data-B" source_node_id="120"
+                   selectedUnit="-1" selectedBox="-1">
+          <PLOT stream_source="110" stream_name="Rhythm Data-B" spike_source="120"
+                name="Electrode 17">
+            <AXIS thresh="0.0" range="250.0"/>
+          </PLOT>
+          <PCA numChannels="1" waveformLength="40" pc1min="-13682.7451171875"
+               pc2min="-17979.138671875" pc1max="22862.9921875" pc2max="19320.291015625">
+            <PCA_DIM pc1="-0.1049775183200836" pc2="0.1434468030929565"/>
+            <PCA_DIM pc1="-0.1090502142906189" pc2="0.153319850564003"/>
+            <PCA_DIM pc1="-0.1125045195221901" pc2="0.1612957864999771"/>
+            <PCA_DIM pc1="-0.1157861575484276" pc2="0.1679501980543137"/>
+            <PCA_DIM pc1="-0.1205400228500366" pc2="0.1681775152683258"/>
+            <PCA_DIM pc1="-0.1358980238437653" pc2="0.1414446979761124"/>
+            <PCA_DIM pc1="-0.1786855608224869" pc2="0.06221083924174309"/>
+            <PCA_DIM pc1="-0.2545027732849121" pc2="-0.06912685930728912"/>
+            <PCA_DIM pc1="-0.3327172696590424" pc2="-0.1973608285188675"/>
+            <PCA_DIM pc1="-0.3633425533771515" pc2="-0.2391320019960403"/>
+            <PCA_DIM pc1="-0.3362145125865936" pc2="-0.1783735007047653"/>
+            <PCA_DIM pc1="-0.2906295359134674" pc2="-0.08736627548933029"/>
+            <PCA_DIM pc1="-0.2596989572048187" pc2="-0.02874455042183399"/>
+            <PCA_DIM pc1="-0.2424855083227158" pc2="-0.0009854151867330074"/>
+            <PCA_DIM pc1="-0.2262741029262543" pc2="0.02137313038110733"/>
+            <PCA_DIM pc1="-0.2069345861673355" pc2="0.04794886335730553"/>
+            <PCA_DIM pc1="-0.1872109919786453" pc2="0.07444384694099426"/>
+            <PCA_DIM pc1="-0.1691494286060333" pc2="0.09704900532960892"/>
+            <PCA_DIM pc1="-0.1524263769388199" pc2="0.1161665916442871"/>
+            <PCA_DIM pc1="-0.1361225098371506" pc2="0.1328849941492081"/>
+            <PCA_DIM pc1="-0.119947075843811" pc2="0.1475060284137726"/>
+            <PCA_DIM pc1="-0.1041814386844635" pc2="0.1598565876483917"/>
+            <PCA_DIM pc1="-0.08915344625711441" pc2="0.169814258813858"/>
+            <PCA_DIM pc1="-0.07526060193777084" pc2="0.1778901517391205"/>
+            <PCA_DIM pc1="-0.06253507733345032" pc2="0.1845157891511917"/>
+            <PCA_DIM pc1="-0.05050582811236382" pc2="0.1897168606519699"/>
+            <PCA_DIM pc1="-0.0390055887401104" pc2="0.1933826804161072"/>
+            <PCA_DIM pc1="-0.02826029434800148" pc2="0.1956598907709122"/>
+            <PCA_DIM pc1="-0.01852188259363174" pc2="0.1969206482172012"/>
+            <PCA_DIM pc1="-0.009818548336625099" pc2="0.197157695889473"/>
+            <PCA_DIM pc1="-0.001847071922384202" pc2="0.1963710933923721"/>
+            <PCA_DIM pc1="0.005661511793732643" pc2="0.1947293877601624"/>
+            <PCA_DIM pc1="0.01236630883067846" pc2="0.1921139657497406"/>
+            <PCA_DIM pc1="0.01783136837184429" pc2="0.1886650323867798"/>
+            <PCA_DIM pc1="0.02240310981869698" pc2="0.1848320662975311"/>
+            <PCA_DIM pc1="0.02673589810729027" pc2="0.1804776787757874"/>
+            <PCA_DIM pc1="0.03127454221248627" pc2="0.1755840480327606"/>
+            <PCA_DIM pc1="0.03589459136128426" pc2="0.1705649942159653"/>
+            <PCA_DIM pc1="0.03967516124248505" pc2="0.1652355492115021"/>
+            <PCA_DIM pc1="0.04213903099298477" pc2="0.1592700779438019"/>
+          </PCA>
+          <BOXES/>
+        </ELECTRODE>
+        <ELECTRODE name="Electrode 18" stream_name="Rhythm Data-B" source_node_id="120"
+                   selectedUnit="-1" selectedBox="-1">
+          <PLOT stream_source="110" stream_name="Rhythm Data-B" spike_source="120"
+                name="Electrode 18">
+            <AXIS thresh="0.0" range="250.0"/>
+          </PLOT>
+          <PCA numChannels="1" waveformLength="40" pc1min="-13223.0712890625"
+               pc2min="-17974.30859375" pc1max="22034.439453125" pc2max="23643.82421875">
+            <PCA_DIM pc1="-0.1336658746004105" pc2="0.1259380429983139"/>
+            <PCA_DIM pc1="-0.1377853155136108" pc2="0.132769912481308"/>
+            <PCA_DIM pc1="-0.141288548707962" pc2="0.1384590715169907"/>
+            <PCA_DIM pc1="-0.1445669531822205" pc2="0.1435486525297165"/>
+            <PCA_DIM pc1="-0.1493560075759888" pc2="0.1413017958402634"/>
+            <PCA_DIM pc1="-0.1617204546928406" pc2="0.108355700969696"/>
+            <PCA_DIM pc1="-0.1913738399744034" pc2="0.0188396405428648"/>
+            <PCA_DIM pc1="-0.2404640316963196" pc2="-0.1228825300931931"/>
+            <PCA_DIM pc1="-0.2891350090503693" pc2="-0.2596686184406281"/>
+            <PCA_DIM pc1="-0.3070672154426575" pc2="-0.3107801377773285"/>
+            <PCA_DIM pc1="-0.288486659526825" pc2="-0.2560412585735321"/>
+            <PCA_DIM pc1="-0.2579936683177948" pc2="-0.1614110320806503"/>
+            <PCA_DIM pc1="-0.2374917566776276" pc2="-0.0940907821059227"/>
+            <PCA_DIM pc1="-0.2270989865064621" pc2="-0.06025748327374458"/>
+            <PCA_DIM pc1="-0.2179156243801117" pc2="-0.03534704074263573"/>
+            <PCA_DIM pc1="-0.2062302976846695" pc2="-0.006809174083173275"/>
+            <PCA_DIM pc1="-0.1937412023544312" pc2="0.02287940680980682"/>
+            <PCA_DIM pc1="-0.1822184473276138" pc2="0.04996294900774956"/>
+            <PCA_DIM pc1="-0.1714155673980713" pc2="0.07398858666419983"/>
+            <PCA_DIM pc1="-0.1607434153556824" pc2="0.09536729007959366"/>
+            <PCA_DIM pc1="-0.1501923203468323" pc2="0.1142487302422523"/>
+            <PCA_DIM pc1="-0.1397878080606461" pc2="0.1308949738740921"/>
+            <PCA_DIM pc1="-0.1296360790729523" pc2="0.1457281857728958"/>
+            <PCA_DIM pc1="-0.1200544387102127" pc2="0.1591131538152695"/>
+            <PCA_DIM pc1="-0.1110189259052277" pc2="0.1707874983549118"/>
+            <PCA_DIM pc1="-0.1018735691905022" pc2="0.180224135518074"/>
+            <PCA_DIM pc1="-0.09208410978317261" pc2="0.1872954815626144"/>
+            <PCA_DIM pc1="-0.08199899643659592" pc2="0.1918672472238541"/>
+            <PCA_DIM pc1="-0.07221069186925888" pc2="0.1939955800771713"/>
+            <PCA_DIM pc1="-0.06255095452070236" pc2="0.1940719336271286"/>
+            <PCA_DIM pc1="-0.05288670584559441" pc2="0.192748636007309"/>
+            <PCA_DIM pc1="-0.04369818791747093" pc2="0.1906485855579376"/>
+            <PCA_DIM pc1="-0.03508260846138" pc2="0.1876957416534424"/>
+            <PCA_DIM pc1="-0.0266694650053978" pc2="0.1834892332553864"/>
+            <PCA_DIM pc1="-0.01833431795239449" pc2="0.1783432215452194"/>
+            <PCA_DIM pc1="-0.0104458536952734" pc2="0.1731510907411575"/>
+            <PCA_DIM pc1="-0.003363881492987275" pc2="0.1681548207998276"/>
+            <PCA_DIM pc1="0.003007591003552079" pc2="0.163039043545723"/>
+            <PCA_DIM pc1="0.008898547850549221" pc2="0.1576699912548065"/>
+            <PCA_DIM pc1="0.0143103925511241" pc2="0.1519820839166641"/>
+          </PCA>
+          <BOXES/>
+        </ELECTRODE>
+        <ELECTRODE name="Electrode 19" stream_name="Rhythm Data-B" source_node_id="120"
+                   selectedUnit="-1" selectedBox="-1">
+          <PLOT stream_source="110" stream_name="Rhythm Data-B" spike_source="120"
+                name="Electrode 19">
+            <AXIS thresh="0.0" range="250.0"/>
+          </PLOT>
+          <PCA numChannels="1" waveformLength="40" pc1min="-10854.7421875" pc2min="-15387.396484375"
+               pc1max="17611.47265625" pc2max="15457.416015625">
+            <PCA_DIM pc1="-0.1075705364346504" pc2="0.1613225042819977"/>
+            <PCA_DIM pc1="-0.1108161211013794" pc2="0.1703426390886307"/>
+            <PCA_DIM pc1="-0.1136246472597122" pc2="0.177904799580574"/>
+            <PCA_DIM pc1="-0.1161855310201645" pc2="0.1840333044528961"/>
+            <PCA_DIM pc1="-0.1188526600599289" pc2="0.1883385926485062"/>
+            <PCA_DIM pc1="-0.1266185641288757" pc2="0.1815886199474335"/>
+            <PCA_DIM pc1="-0.1571798920631409" pc2="0.130182683467865"/>
+            <PCA_DIM pc1="-0.2265722304582596" pc2="0.0006081477040424943"/>
+            <PCA_DIM pc1="-0.3117439746856689" pc2="-0.1655350625514984"/>
+            <PCA_DIM pc1="-0.3566389083862305" pc2="-0.252968043088913"/>
+            <PCA_DIM pc1="-0.3396434187889099" pc2="-0.2114454358816147"/>
+            <PCA_DIM pc1="-0.29732346534729" pc2="-0.1175140663981438"/>
+            <PCA_DIM pc1="-0.2666689455509186" pc2="-0.05337235704064369"/>
+            <PCA_DIM pc1="-0.2494277209043503" pc2="-0.02364701777696609"/>
+            <PCA_DIM pc1="-0.2340256422758102" pc2="-0.001152357785031199"/>
+            <PCA_DIM pc1="-0.2161130309104919" pc2="0.02528877928853035"/>
+            <PCA_DIM pc1="-0.1971763521432877" pc2="0.05216218903660774"/>
+            <PCA_DIM pc1="-0.1787961572408676" pc2="0.07546102255582809"/>
+            <PCA_DIM pc1="-0.1612184941768646" pc2="0.09482916444540024"/>
+            <PCA_DIM pc1="-0.1441503018140793" pc2="0.1115006133913994"/>
+            <PCA_DIM pc1="-0.1275897175073624" pc2="0.1263296604156494"/>
+            <PCA_DIM pc1="-0.1116563230752945" pc2="0.1392662674188614"/>
+            <PCA_DIM pc1="-0.09636712074279785" pc2="0.150458887219429"/>
+            <PCA_DIM pc1="-0.08190387487411499" pc2="0.1604101955890656"/>
+            <PCA_DIM pc1="-0.06844270974397659" pc2="0.1688701510429382"/>
+            <PCA_DIM pc1="-0.05591915547847748" pc2="0.1754638999700546"/>
+            <PCA_DIM pc1="-0.04418012872338295" pc2="0.1804836094379425"/>
+            <PCA_DIM pc1="-0.03320484235882759" pc2="0.1843339502811432"/>
+            <PCA_DIM pc1="-0.02312635444104671" pc2="0.1870872974395752"/>
+            <PCA_DIM pc1="-0.0139757851138711" pc2="0.1885863095521927"/>
+            <PCA_DIM pc1="-0.0055284951813519" pc2="0.189080148935318"/>
+            <PCA_DIM pc1="0.002112233312800527" pc2="0.1892341077327728"/>
+            <PCA_DIM pc1="0.008863991126418114" pc2="0.1889817118644714"/>
+            <PCA_DIM pc1="0.01512026414275169" pc2="0.1878079921007156"/>
+            <PCA_DIM pc1="0.02084936387836933" pc2="0.1857432723045349"/>
+            <PCA_DIM pc1="0.02578592300415039" pc2="0.1829307079315186"/>
+            <PCA_DIM pc1="0.0300915502011776" pc2="0.1793343722820282"/>
+            <PCA_DIM pc1="0.0341188833117485" pc2="0.1751416772603989"/>
+            <PCA_DIM pc1="0.03791588172316551" pc2="0.1707131564617157"/>
+            <PCA_DIM pc1="0.04126664251089096" pc2="0.1661528199911118"/>
+          </PCA>
+          <BOXES/>
+        </ELECTRODE>
+        <ELECTRODE name="Electrode 20" stream_name="Rhythm Data-B" source_node_id="120"
+                   selectedUnit="-1" selectedBox="-1">
+          <PLOT stream_source="110" stream_name="Rhythm Data-B" spike_source="120"
+                name="Electrode 20">
+            <AXIS thresh="0.0" range="250.0"/>
+          </PLOT>
+          <PCA numChannels="1" waveformLength="40" pc1min="-9717.060546875"
+               pc2min="-6426.47607421875" pc1max="16187.259765625" pc2max="4931.54248046875">
+            <PCA_DIM pc1="-0.1711962223052979" pc2="0.06349632889032364"/>
+            <PCA_DIM pc1="-0.1750581860542297" pc2="0.05252861231565475"/>
+            <PCA_DIM pc1="-0.1785368472337723" pc2="0.04218481108546257"/>
+            <PCA_DIM pc1="-0.1817330867052078" pc2="0.03240635991096497"/>
+            <PCA_DIM pc1="-0.1854439824819565" pc2="0.02572714723646641"/>
+            <PCA_DIM pc1="-0.1904416233301163" pc2="0.03409019485116005"/>
+            <PCA_DIM pc1="-0.1977732628583908" pc2="0.08079129457473755"/>
+            <PCA_DIM pc1="-0.2085457891225815" pc2="0.1678738743066788"/>
+            <PCA_DIM pc1="-0.2201888412237167" pc2="0.253741055727005"/>
+            <PCA_DIM pc1="-0.2254299074411392" pc2="0.2897611260414124"/>
+            <PCA_DIM pc1="-0.2206309288740158" pc2="0.2645139992237091"/>
+            <PCA_DIM pc1="-0.2113361656665802" pc2="0.2040583789348602"/>
+            <PCA_DIM pc1="-0.2042136192321777" pc2="0.1416245400905609"/>
+            <PCA_DIM pc1="-0.1997476518154144" pc2="0.09212072938680649"/>
+            <PCA_DIM pc1="-0.1955764889717102" pc2="0.05242684856057167"/>
+            <PCA_DIM pc1="-0.1910547912120819" pc2="0.01763750985264778"/>
+            <PCA_DIM pc1="-0.1869853287935257" pc2="-0.01247673388570547"/>
+            <PCA_DIM pc1="-0.1832896620035172" pc2="-0.03851247951388359"/>
+            <PCA_DIM pc1="-0.1790589988231659" pc2="-0.0625733956694603"/>
+            <PCA_DIM pc1="-0.1741245836019516" pc2="-0.08561592549085617"/>
+            <PCA_DIM pc1="-0.1686436980962753" pc2="-0.1069704219698906"/>
+            <PCA_DIM pc1="-0.1627721041440964" pc2="-0.1247945055365562"/>
+            <PCA_DIM pc1="-0.156576082110405" pc2="-0.1379525661468506"/>
+            <PCA_DIM pc1="-0.1496743112802505" pc2="-0.1479502469301224"/>
+            <PCA_DIM pc1="-0.1421736478805542" pc2="-0.1569597125053406"/>
+            <PCA_DIM pc1="-0.1344898641109467" pc2="-0.165934830904007"/>
+            <PCA_DIM pc1="-0.1268320381641388" pc2="-0.1750969290733337"/>
+            <PCA_DIM pc1="-0.1194152012467384" pc2="-0.1834897994995117"/>
+            <PCA_DIM pc1="-0.11224165558815" pc2="-0.1898249387741089"/>
+            <PCA_DIM pc1="-0.105088859796524" pc2="-0.1944408118724823"/>
+            <PCA_DIM pc1="-0.09784351289272308" pc2="-0.1979615241289139"/>
+            <PCA_DIM pc1="-0.09071367979049683" pc2="-0.2004217505455017"/>
+            <PCA_DIM pc1="-0.08382497727870941" pc2="-0.2017337679862976"/>
+            <PCA_DIM pc1="-0.07697901129722595" pc2="-0.2015418857336044"/>
+            <PCA_DIM pc1="-0.06996874511241913" pc2="-0.2001784592866898"/>
+            <PCA_DIM pc1="-0.06256074458360672" pc2="-0.1985727548599243"/>
+            <PCA_DIM pc1="-0.05496556684374809" pc2="-0.1971080452203751"/>
+            <PCA_DIM pc1="-0.04778997600078583" pc2="-0.1959296017885208"/>
+            <PCA_DIM pc1="-0.04119705036282539" pc2="-0.1939805597066879"/>
+            <PCA_DIM pc1="-0.0351337268948555" pc2="-0.1899619549512863"/>
+          </PCA>
+          <BOXES/>
+        </ELECTRODE>
+        <ELECTRODE name="Electrode 21" stream_name="Rhythm Data-B" source_node_id="120"
+                   selectedUnit="-1" selectedBox="-1">
+          <PLOT stream_source="110" stream_name="Rhythm Data-B" spike_source="120"
+                name="Electrode 21">
+            <AXIS thresh="0.0" range="250.0"/>
+          </PLOT>
+          <PCA numChannels="1" waveformLength="40" pc1min="-10717.1259765625"
+               pc2min="-6556.712890625" pc1max="17845.359375" pc2max="9014.4423828125">
+            <PCA_DIM pc1="-0.1562013030052185" pc2="0.0383310467004776"/>
+            <PCA_DIM pc1="-0.1611620038747787" pc2="0.04417900368571281"/>
+            <PCA_DIM pc1="-0.166162371635437" pc2="0.05031859129667282"/>
+            <PCA_DIM pc1="-0.1707787662744522" pc2="0.05641204863786697"/>
+            <PCA_DIM pc1="-0.1743413805961609" pc2="0.06088883802294731"/>
+            <PCA_DIM pc1="-0.1782456040382385" pc2="0.05848752334713936"/>
+            <PCA_DIM pc1="-0.18956458568573" pc2="0.008339455351233482"/>
+            <PCA_DIM pc1="-0.2159947603940964" pc2="-0.1401375383138657"/>
+            <PCA_DIM pc1="-0.2462684065103531" pc2="-0.3051678836345673"/>
+            <PCA_DIM pc1="-0.2556978464126587" pc2="-0.3356184661388397"/>
+            <PCA_DIM pc1="-0.2416502833366394" pc2="-0.2496262639760971"/>
+            <PCA_DIM pc1="-0.2237076461315155" pc2="-0.1761533319950104"/>
+            <PCA_DIM pc1="-0.2138128578662872" pc2="-0.152811124920845"/>
+            <PCA_DIM pc1="-0.2089914083480835" pc2="-0.1363991945981979"/>
+            <PCA_DIM pc1="-0.2029564082622528" pc2="-0.1014010831713676"/>
+            <PCA_DIM pc1="-0.1945242881774902" pc2="-0.05799464508891106"/>
+            <PCA_DIM pc1="-0.1862833350896835" pc2="-0.02035492286086082"/>
+            <PCA_DIM pc1="-0.1797545254230499" pc2="0.01029494684189558"/>
+            <PCA_DIM pc1="-0.1745931953191757" pc2="0.03864660114049911"/>
+            <PCA_DIM pc1="-0.1694137752056122" pc2="0.06565652042627335"/>
+            <PCA_DIM pc1="-0.1628541350364685" pc2="0.08927579969167709"/>
+            <PCA_DIM pc1="-0.1549151241779327" pc2="0.1084588915109634"/>
+            <PCA_DIM pc1="-0.1469026505947113" pc2="0.123900979757309"/>
+            <PCA_DIM pc1="-0.1399276107549667" pc2="0.1376751065254211"/>
+            <PCA_DIM pc1="-0.1335727870464325" pc2="0.1511392891407013"/>
+            <PCA_DIM pc1="-0.126795619726181" pc2="0.163092777132988"/>
+            <PCA_DIM pc1="-0.1194436177611351" pc2="0.1722118407487869"/>
+            <PCA_DIM pc1="-0.1122139692306519" pc2="0.1789606213569641"/>
+            <PCA_DIM pc1="-0.1054986640810966" pc2="0.1844277828931808"/>
+            <PCA_DIM pc1="-0.0989416316151619" pc2="0.1894832402467728"/>
+            <PCA_DIM pc1="-0.09261583536863327" pc2="0.1940450072288513"/>
+            <PCA_DIM pc1="-0.08689452707767487" pc2="0.1967812478542328"/>
+            <PCA_DIM pc1="-0.08120700716972351" pc2="0.1972733736038208"/>
+            <PCA_DIM pc1="-0.07482738047838211" pc2="0.1965585798025131"/>
+            <PCA_DIM pc1="-0.06803993135690689" pc2="0.1950486749410629"/>
+            <PCA_DIM pc1="-0.06143036484718323" pc2="0.1925679445266724"/>
+            <PCA_DIM pc1="-0.05526204034686089" pc2="0.1901529878377914"/>
+            <PCA_DIM pc1="-0.04956099018454552" pc2="0.1884451061487198"/>
+            <PCA_DIM pc1="-0.04395978525280952" pc2="0.185809925198555"/>
+            <PCA_DIM pc1="-0.03823564574122429" pc2="0.1807183474302292"/>
+          </PCA>
+          <BOXES/>
+        </ELECTRODE>
+        <ELECTRODE name="Electrode 22" stream_name="Rhythm Data-B" source_node_id="120"
+                   selectedUnit="-1" selectedBox="-1">
+          <PLOT stream_source="110" stream_name="Rhythm Data-B" spike_source="120"
+                name="Electrode 22">
+            <AXIS thresh="0.0" range="250.0"/>
+          </PLOT>
+          <PCA numChannels="1" waveformLength="40" pc1min="-10549.306640625"
+               pc2min="-8593.755859375" pc1max="17540.427734375" pc2max="12778.06640625">
+            <PCA_DIM pc1="-0.1467503607273102" pc2="0.0604664608836174"/>
+            <PCA_DIM pc1="-0.1521438807249069" pc2="0.06513400375843048"/>
+            <PCA_DIM pc1="-0.1572673320770264" pc2="0.06895656138658524"/>
+            <PCA_DIM pc1="-0.16287761926651" pc2="0.07258938252925873"/>
+            <PCA_DIM pc1="-0.1694056689739227" pc2="0.0748276561498642"/>
+            <PCA_DIM pc1="-0.1764592230319977" pc2="0.07235042750835419"/>
+            <PCA_DIM pc1="-0.1878812313079834" pc2="0.03339384868741035"/>
+            <PCA_DIM pc1="-0.2112758606672287" pc2="-0.09720407426357269"/>
+            <PCA_DIM pc1="-0.2415397018194199" pc2="-0.286397248506546"/>
+            <PCA_DIM pc1="-0.2568112015724182" pc2="-0.3926172852516174"/>
+            <PCA_DIM pc1="-0.2461931258440018" pc2="-0.3445720374584198"/>
+            <PCA_DIM pc1="-0.224856048822403" pc2="-0.2286377102136612"/>
+            <PCA_DIM pc1="-0.210628017783165" pc2="-0.1461077034473419"/>
+            <PCA_DIM pc1="-0.2047043740749359" pc2="-0.1057663261890411"/>
+            <PCA_DIM pc1="-0.2003153562545776" pc2="-0.07513196021318436"/>
+            <PCA_DIM pc1="-0.1947175562381744" pc2="-0.04072459787130356"/>
+            <PCA_DIM pc1="-0.1887196898460388" pc2="-0.006859847344458103"/>
+            <PCA_DIM pc1="-0.182788148522377" pc2="0.0224688034504652"/>
+            <PCA_DIM pc1="-0.1768417805433273" pc2="0.04759722948074341"/>
+            <PCA_DIM pc1="-0.1706604361534119" pc2="0.06940176337957382"/>
+            <PCA_DIM pc1="-0.1638148874044418" pc2="0.08799377083778381"/>
+            <PCA_DIM pc1="-0.1566586494445801" pc2="0.104323036968708"/>
+            <PCA_DIM pc1="-0.149871289730072" pc2="0.1193095520138741"/>
+            <PCA_DIM pc1="-0.1433455795049667" pc2="0.1323728114366531"/>
+            <PCA_DIM pc1="-0.1368711888790131" pc2="0.1428787112236023"/>
+            <PCA_DIM pc1="-0.130529522895813" pc2="0.1514628827571869"/>
+            <PCA_DIM pc1="-0.1241690739989281" pc2="0.1588954925537109"/>
+            <PCA_DIM pc1="-0.1174027174711227" pc2="0.1651783734560013"/>
+            <PCA_DIM pc1="-0.1104900240898132" pc2="0.1707184165716171"/>
+            <PCA_DIM pc1="-0.1039973050355911" pc2="0.1755112111568451"/>
+            <PCA_DIM pc1="-0.09809556603431702" pc2="0.1781803071498871"/>
+            <PCA_DIM pc1="-0.09246723353862762" pc2="0.1785904467105865"/>
+            <PCA_DIM pc1="-0.08670125901699066" pc2="0.1785520017147064"/>
+            <PCA_DIM pc1="-0.08040622621774673" pc2="0.1788369715213776"/>
+            <PCA_DIM pc1="-0.07347606122493744" pc2="0.1782018393278122"/>
+            <PCA_DIM pc1="-0.0665510967373848" pc2="0.17556232213974"/>
+            <PCA_DIM pc1="-0.06006135419011116" pc2="0.1716234385967255"/>
+            <PCA_DIM pc1="-0.05399820953607559" pc2="0.167705163359642"/>
+            <PCA_DIM pc1="-0.0483248196542263" pc2="0.1637690961360931"/>
+            <PCA_DIM pc1="-0.04310938715934753" pc2="0.1591474413871765"/>
+          </PCA>
+          <BOXES/>
+        </ELECTRODE>
+        <ELECTRODE name="Electrode 23" stream_name="Rhythm Data-B" source_node_id="120"
+                   selectedUnit="-1" selectedBox="-1">
+          <PLOT stream_source="110" stream_name="Rhythm Data-B" spike_source="120"
+                name="Electrode 23">
+            <AXIS thresh="0.0" range="250.0"/>
+          </PLOT>
+          <PCA numChannels="1" waveformLength="40" pc1min="-10800.5322265625"
+               pc2min="-9305.8525390625" pc1max="17970.103515625" pc2max="13121.9541015625">
+            <PCA_DIM pc1="-0.1512968838214874" pc2="0.06148551031947136"/>
+            <PCA_DIM pc1="-0.1569966375827789" pc2="0.06684804707765579"/>
+            <PCA_DIM pc1="-0.1631680279970169" pc2="0.07204487919807434"/>
+            <PCA_DIM pc1="-0.1688179671764374" pc2="0.07642890512943268"/>
+            <PCA_DIM pc1="-0.1737201809883118" pc2="0.07846441864967346"/>
+            <PCA_DIM pc1="-0.1790853142738342" pc2="0.07529843598604202"/>
+            <PCA_DIM pc1="-0.1899895370006561" pc2="0.03544019907712936"/>
+            <PCA_DIM pc1="-0.2140889167785645" pc2="-0.09508181363344193"/>
+            <PCA_DIM pc1="-0.2458223849534988" pc2="-0.2826319932937622"/>
+            <PCA_DIM pc1="-0.2620171904563904" pc2="-0.3874672949314117"/>
+            <PCA_DIM pc1="-0.2507962882518768" pc2="-0.3387033343315125"/>
+            <PCA_DIM pc1="-0.2283562868833542" pc2="-0.2212138921022415"/>
+            <PCA_DIM pc1="-0.2140267938375473" pc2="-0.1368556171655655"/>
+            <PCA_DIM pc1="-0.2089265137910843" pc2="-0.09597744792699814"/>
+            <PCA_DIM pc1="-0.2048760801553726" pc2="-0.06589271128177643"/>
+            <PCA_DIM pc1="-0.198079839348793" pc2="-0.03216968476772308"/>
+            <PCA_DIM pc1="-0.1897618919610977" pc2="0.001051308820024133"/>
+            <PCA_DIM pc1="-0.1817280650138855" pc2="0.02988775074481964"/>
+            <PCA_DIM pc1="-0.1748768985271454" pc2="0.05493643134832382"/>
+            <PCA_DIM pc1="-0.1687208712100983" pc2="0.07698586583137512"/>
+            <PCA_DIM pc1="-0.162055715918541" pc2="0.09574002772569656"/>
+            <PCA_DIM pc1="-0.1546852439641953" pc2="0.1116104871034622"/>
+            <PCA_DIM pc1="-0.1473556756973267" pc2="0.1257637739181519"/>
+            <PCA_DIM pc1="-0.1401012986898422" pc2="0.1382952928543091"/>
+            <PCA_DIM pc1="-0.1324557811021805" pc2="0.1484511345624924"/>
+            <PCA_DIM pc1="-0.1243714764714241" pc2="0.1563716381788254"/>
+            <PCA_DIM pc1="-0.116193987429142" pc2="0.1630328893661499"/>
+            <PCA_DIM pc1="-0.1087559089064598" pc2="0.1690109521150589"/>
+            <PCA_DIM pc1="-0.1023384109139442" pc2="0.1741242855787277"/>
+            <PCA_DIM pc1="-0.09618714451789856" pc2="0.1775369048118591"/>
+            <PCA_DIM pc1="-0.08986668288707733" pc2="0.1790138483047485"/>
+            <PCA_DIM pc1="-0.08330655843019485" pc2="0.1795827299356461"/>
+            <PCA_DIM pc1="-0.07646417617797852" pc2="0.1798013746738434"/>
+            <PCA_DIM pc1="-0.06997504830360413" pc2="0.1794019639492035"/>
+            <PCA_DIM pc1="-0.06394200772047043" pc2="0.1780545115470886"/>
+            <PCA_DIM pc1="-0.05749060586094856" pc2="0.1754182428121567"/>
+            <PCA_DIM pc1="-0.05092457309365273" pc2="0.1717732697725296"/>
+            <PCA_DIM pc1="-0.04544262960553169" pc2="0.1681672483682632"/>
+            <PCA_DIM pc1="-0.04056306555867195" pc2="0.1646182984113693"/>
+            <PCA_DIM pc1="-0.03499297052621841" pc2="0.1598859429359436"/>
+          </PCA>
+          <BOXES/>
+        </ELECTRODE>
+        <ELECTRODE name="Electrode 24" stream_name="Rhythm Data-B" source_node_id="120"
+                   selectedUnit="-1" selectedBox="-1">
+          <PLOT stream_source="110" stream_name="Rhythm Data-B" spike_source="120"
+                name="Electrode 24">
+            <AXIS thresh="0.0" range="250.0"/>
+          </PLOT>
+          <PCA numChannels="1" waveformLength="40" pc1min="-9937.705078125"
+               pc2min="-14528.9560546875" pc1max="16669.48828125" pc2max="20481.16015625">
+            <PCA_DIM pc1="-0.1312047690153122" pc2="0.1064204201102257"/>
+            <PCA_DIM pc1="-0.1368850767612457" pc2="0.1120338886976242"/>
+            <PCA_DIM pc1="-0.1427467465400696" pc2="0.1174345016479492"/>
+            <PCA_DIM pc1="-0.1491075158119202" pc2="0.1211244910955429"/>
+            <PCA_DIM pc1="-0.1569216251373291" pc2="0.1206458732485771"/>
+            <PCA_DIM pc1="-0.171050176024437" pc2="0.09438668936491013"/>
+            <PCA_DIM pc1="-0.1989433914422989" pc2="0.00660345796495676"/>
+            <PCA_DIM pc1="-0.2399238646030426" pc2="-0.1374568343162537"/>
+            <PCA_DIM pc1="-0.27876216173172" pc2="-0.2735817134380341"/>
+            <PCA_DIM pc1="-0.29311403632164" pc2="-0.322616845369339"/>
+            <PCA_DIM pc1="-0.2770642638206482" pc2="-0.2700426578521729"/>
+            <PCA_DIM pc1="-0.2498766928911209" pc2="-0.1838357895612717"/>
+            <PCA_DIM pc1="-0.2299308478832245" pc2="-0.1234906986355782"/>
+            <PCA_DIM pc1="-0.2177290916442871" pc2="-0.08901973068714142"/>
+            <PCA_DIM pc1="-0.206951230764389" pc2="-0.0599665567278862"/>
+            <PCA_DIM pc1="-0.1955137699842453" pc2="-0.02946414984762669"/>
+            <PCA_DIM pc1="-0.1849793046712875" pc2="0.000411803979659453"/>
+            <PCA_DIM pc1="-0.1760869920253754" pc2="0.02809992432594299"/>
+            <PCA_DIM pc1="-0.1675579398870468" pc2="0.05246500298380852"/>
+            <PCA_DIM pc1="-0.1585668921470642" pc2="0.07320087403059006"/>
+            <PCA_DIM pc1="-0.1494580060243607" pc2="0.09131983667612076"/>
+            <PCA_DIM pc1="-0.1405259519815445" pc2="0.1076798215508461"/>
+            <PCA_DIM pc1="-0.1321340203285217" pc2="0.1227009072899818"/>
+            <PCA_DIM pc1="-0.1246297284960747" pc2="0.1363958418369293"/>
+            <PCA_DIM pc1="-0.1177908554673195" pc2="0.1483289748430252"/>
+            <PCA_DIM pc1="-0.1107984557747841" pc2="0.1583417803049088"/>
+            <PCA_DIM pc1="-0.1034775227308273" pc2="0.1667787879705429"/>
+            <PCA_DIM pc1="-0.0966983288526535" pc2="0.1740478873252869"/>
+            <PCA_DIM pc1="-0.09072247892618179" pc2="0.1804463118314743"/>
+            <PCA_DIM pc1="-0.08525467664003372" pc2="0.1858855485916138"/>
+            <PCA_DIM pc1="-0.07988523691892624" pc2="0.1899373233318329"/>
+            <PCA_DIM pc1="-0.07405994087457657" pc2="0.19253870844841"/>
+            <PCA_DIM pc1="-0.06770135462284088" pc2="0.1936987042427063"/>
+            <PCA_DIM pc1="-0.06114634871482849" pc2="0.1936490386724472"/>
+            <PCA_DIM pc1="-0.0548761747777462" pc2="0.1928711384534836"/>
+            <PCA_DIM pc1="-0.04897518455982208" pc2="0.1912489533424377"/>
+            <PCA_DIM pc1="-0.04340305924415588" pc2="0.1888087242841721"/>
+            <PCA_DIM pc1="-0.03851626440882683" pc2="0.1859354674816132"/>
+            <PCA_DIM pc1="-0.03413898497819901" pc2="0.1823625564575195"/>
+            <PCA_DIM pc1="-0.02996340207755566" pc2="0.1782246977090836"/>
+          </PCA>
+          <BOXES/>
+        </ELECTRODE>
+        <ELECTRODE name="Electrode 25" stream_name="Rhythm Data-B" source_node_id="120"
+                   selectedUnit="-1" selectedBox="-1">
+          <PLOT stream_source="110" stream_name="Rhythm Data-B" spike_source="120"
+                name="Electrode 25">
+            <AXIS thresh="0.0" range="250.0"/>
+          </PLOT>
+          <PCA numChannels="1" waveformLength="40" pc1min="-1079.600341796875"
+               pc2min="-1052.907104492188" pc1max="1765.724853515625" pc2max="771.0127563476563">
+            <PCA_DIM pc1="-0.127332478761673" pc2="0.2060442417860031"/>
+            <PCA_DIM pc1="-0.1334022432565689" pc2="0.1960998177528381"/>
+            <PCA_DIM pc1="-0.1397980451583862" pc2="0.1870232373476028"/>
+            <PCA_DIM pc1="-0.1464472115039825" pc2="0.1784878224134445"/>
+            <PCA_DIM pc1="-0.1530023664236069" pc2="0.1679574102163315"/>
+            <PCA_DIM pc1="-0.1586979180574417" pc2="0.1543511152267456"/>
+            <PCA_DIM pc1="-0.1642969250679016" pc2="0.141642227768898"/>
+            <PCA_DIM pc1="-0.1725979596376419" pc2="0.1363031417131424"/>
+            <PCA_DIM pc1="-0.1832863837480545" pc2="0.1394221633672714"/>
+            <PCA_DIM pc1="-0.1887287497520447" pc2="0.1413763761520386"/>
+            <PCA_DIM pc1="-0.1844203174114227" pc2="0.1328407675027847"/>
+            <PCA_DIM pc1="-0.1771245300769806" pc2="0.1195007339119911"/>
+            <PCA_DIM pc1="-0.1737398207187653" pc2="0.1118641123175621"/>
+            <PCA_DIM pc1="-0.1734163463115692" pc2="0.1113979145884514"/>
+            <PCA_DIM pc1="-0.1726688146591187" pc2="0.1107397973537445"/>
+            <PCA_DIM pc1="-0.1711216568946838" pc2="0.1012140288949013"/>
+            <PCA_DIM pc1="-0.1710570901632309" pc2="0.0844263955950737"/>
+            <PCA_DIM pc1="-0.172732338309288" pc2="0.06778089702129364"/>
+            <PCA_DIM pc1="-0.1741467118263245" pc2="0.05085486173629761"/>
+            <PCA_DIM pc1="-0.1742402166128159" pc2="0.03144296258687973"/>
+            <PCA_DIM pc1="-0.1734682023525238" pc2="0.01257560960948467"/>
+            <PCA_DIM pc1="-0.1724347025156021" pc2="-0.004953280091285706"/>
+            <PCA_DIM pc1="-0.1710216552019119" pc2="-0.02332787588238716"/>
+            <PCA_DIM pc1="-0.1691900193691254" pc2="-0.04152375459671021"/>
+            <PCA_DIM pc1="-0.1668272316455841" pc2="-0.0570470429956913"/>
+            <PCA_DIM pc1="-0.163552314043045" pc2="-0.07273193448781967"/>
+            <PCA_DIM pc1="-0.159962996840477" pc2="-0.09329472482204437"/>
+            <PCA_DIM pc1="-0.1570707857608795" pc2="-0.1174227520823479"/>
+            <PCA_DIM pc1="-0.1550265103578568" pc2="-0.1412156522274017"/>
+            <PCA_DIM pc1="-0.1533824354410172" pc2="-0.1635101139545441"/>
+            <PCA_DIM pc1="-0.1517506539821625" pc2="-0.1844078898429871"/>
+            <PCA_DIM pc1="-0.149951308965683" pc2="-0.2037996798753738"/>
+            <PCA_DIM pc1="-0.1473096758127213" pc2="-0.2201596200466156"/>
+            <PCA_DIM pc1="-0.1428999155759811" pc2="-0.2322049140930176"/>
+            <PCA_DIM pc1="-0.1371158957481384" pc2="-0.2416295260190964"/>
+            <PCA_DIM pc1="-0.1305626183748245" pc2="-0.2493232935667038"/>
+            <PCA_DIM pc1="-0.1235616356134415" pc2="-0.2530028223991394"/>
+            <PCA_DIM pc1="-0.1169787347316742" pc2="-0.2523147463798523"/>
+            <PCA_DIM pc1="-0.1109448820352554" pc2="-0.2489844709634781"/>
+            <PCA_DIM pc1="-0.1050999835133553" pc2="-0.2432929277420044"/>
+          </PCA>
+          <BOXES/>
+        </ELECTRODE>
+        <ELECTRODE name="Electrode 26" stream_name="Rhythm Data-B" source_node_id="120"
+                   selectedUnit="-1" selectedBox="-1">
+          <PLOT stream_source="110" stream_name="Rhythm Data-B" spike_source="120"
+                name="Electrode 26">
+            <AXIS thresh="14.47369194030762" range="500.0"/>
+          </PLOT>
+          <PCA numChannels="1" waveformLength="40" pc1min="-10947.12890625"
+               pc2min="-4500.3701171875" pc1max="18200.67578125" pc2max="3217.325927734375">
+            <PCA_DIM pc1="-0.1621939241886139" pc2="0.08194686472415924"/>
+            <PCA_DIM pc1="-0.1672193109989166" pc2="0.0694848895072937"/>
+            <PCA_DIM pc1="-0.1719677895307541" pc2="0.05901345610618591"/>
+            <PCA_DIM pc1="-0.1771905869245529" pc2="0.05199781432747841"/>
+            <PCA_DIM pc1="-0.1834462732076645" pc2="0.05679883062839508"/>
+            <PCA_DIM pc1="-0.1899105757474899" pc2="0.08537638187408447"/>
+            <PCA_DIM pc1="-0.19773268699646" pc2="0.1320704370737076"/>
+            <PCA_DIM pc1="-0.2107306569814682" pc2="0.17253078520298"/>
+            <PCA_DIM pc1="-0.2267670929431915" pc2="0.1902583241462708"/>
+            <PCA_DIM pc1="-0.2337825894355774" pc2="0.188213512301445"/>
+            <PCA_DIM pc1="-0.2247859537601471" pc2="0.1763425022363663"/>
+            <PCA_DIM pc1="-0.209090918302536" pc2="0.1596876531839371"/>
+            <PCA_DIM pc1="-0.1990241706371307" pc2="0.1381347328424454"/>
+            <PCA_DIM pc1="-0.195259228348732" pc2="0.111816294491291"/>
+            <PCA_DIM pc1="-0.1919629126787186" pc2="0.0838937982916832"/>
+            <PCA_DIM pc1="-0.1871504783630371" pc2="0.05785632133483887"/>
+            <PCA_DIM pc1="-0.1825195699930191" pc2="0.0344792902469635"/>
+            <PCA_DIM pc1="-0.1784632951021194" pc2="0.01074468065053225"/>
+            <PCA_DIM pc1="-0.1738370358943939" pc2="-0.01582573540508747"/>
+            <PCA_DIM pc1="-0.1685435473918915" pc2="-0.04268224909901619"/>
+            <PCA_DIM pc1="-0.1634468585252762" pc2="-0.06635952740907669"/>
+            <PCA_DIM pc1="-0.1585574895143509" pc2="-0.0864780992269516"/>
+            <PCA_DIM pc1="-0.1532413959503174" pc2="-0.1049488857388496"/>
+            <PCA_DIM pc1="-0.1475811153650284" pc2="-0.1227576732635498"/>
+            <PCA_DIM pc1="-0.142060711979866" pc2="-0.1388045698404312"/>
+            <PCA_DIM pc1="-0.1363514214754105" pc2="-0.1530539989471436"/>
+            <PCA_DIM pc1="-0.1300757527351379" pc2="-0.167433112859726"/>
+            <PCA_DIM pc1="-0.123840294778347" pc2="-0.1826422065496445"/>
+            <PCA_DIM pc1="-0.1179160550236702" pc2="-0.1973767429590225"/>
+            <PCA_DIM pc1="-0.1116617172956467" pc2="-0.2099622040987015"/>
+            <PCA_DIM pc1="-0.1049395278096199" pc2="-0.2183492630720139"/>
+            <PCA_DIM pc1="-0.09828829020261765" pc2="-0.2226220369338989"/>
+            <PCA_DIM pc1="-0.09178951382637024" pc2="-0.2256084829568863"/>
+            <PCA_DIM pc1="-0.08568430691957474" pc2="-0.2287551611661911"/>
+            <PCA_DIM pc1="-0.08043224364519119" pc2="-0.231577143073082"/>
+            <PCA_DIM pc1="-0.07510259002447128" pc2="-0.2337871342897415"/>
+            <PCA_DIM pc1="-0.06899812817573547" pc2="-0.2352710664272308"/>
+            <PCA_DIM pc1="-0.06304674595594406" pc2="-0.2350590825080872"/>
+            <PCA_DIM pc1="-0.05745385214686394" pc2="-0.2327312678098679"/>
+            <PCA_DIM pc1="-0.05200838670134544" pc2="-0.2288443297147751"/>
+          </PCA>
+          <BOXES/>
+        </ELECTRODE>
+        <ELECTRODE name="Electrode 27" stream_name="Rhythm Data-B" source_node_id="120"
+                   selectedUnit="-1" selectedBox="-1">
+          <PLOT stream_source="110" stream_name="Rhythm Data-B" spike_source="120"
+                name="Electrode 27">
+            <AXIS thresh="0.0" range="250.0"/>
+          </PLOT>
+          <PCA numChannels="1" waveformLength="40" pc1min="-10779.392578125"
+               pc2min="-8544.7060546875" pc1max="17945.177734375" pc2max="12225.0966796875">
+            <PCA_DIM pc1="-0.1582906693220139" pc2="0.05831562355160713"/>
+            <PCA_DIM pc1="-0.1627921909093857" pc2="0.06310560554265976"/>
+            <PCA_DIM pc1="-0.1672017276287079" pc2="0.06832177937030792"/>
+            <PCA_DIM pc1="-0.1716982275247574" pc2="0.07295649498701096"/>
+            <PCA_DIM pc1="-0.1760580986738205" pc2="0.075106181204319"/>
+            <PCA_DIM pc1="-0.1809905022382736" pc2="0.07096318155527115"/>
+            <PCA_DIM pc1="-0.1919905841350555" pc2="0.02628131583333015"/>
+            <PCA_DIM pc1="-0.2166484594345093" pc2="-0.109531432390213"/>
+            <PCA_DIM pc1="-0.2479652315378189" pc2="-0.2926312983036041"/>
+            <PCA_DIM pc1="-0.2622887194156647" pc2="-0.3857212662696838"/>
+            <PCA_DIM pc1="-0.2488409727811813" pc2="-0.3316483795642853"/>
+            <PCA_DIM pc1="-0.2246971726417542" pc2="-0.2169097512960434"/>
+            <PCA_DIM pc1="-0.2090409398078918" pc2="-0.1362902373075485"/>
+            <PCA_DIM pc1="-0.2025988847017288" pc2="-0.09798834472894669"/>
+            <PCA_DIM pc1="-0.1978454738855362" pc2="-0.06933034211397171"/>
+            <PCA_DIM pc1="-0.1920992136001587" pc2="-0.03535446897149086"/>
+            <PCA_DIM pc1="-0.1861896514892578" pc2="-0.0009855864336714149"/>
+            <PCA_DIM pc1="-0.1801465153694153" pc2="0.0281261783093214"/>
+            <PCA_DIM pc1="-0.1736589968204498" pc2="0.05186494812369347"/>
+            <PCA_DIM pc1="-0.1664397120475769" pc2="0.07207749783992767"/>
+            <PCA_DIM pc1="-0.1587903201580048" pc2="0.09016136825084686"/>
+            <PCA_DIM pc1="-0.1516996622085571" pc2="0.1068994104862213"/>
+            <PCA_DIM pc1="-0.1451633870601654" pc2="0.1221654862165451"/>
+            <PCA_DIM pc1="-0.1383956074714661" pc2="0.1352796405553818"/>
+            <PCA_DIM pc1="-0.1313493549823761" pc2="0.1461642533540726"/>
+            <PCA_DIM pc1="-0.1243158653378487" pc2="0.1551224142313004"/>
+            <PCA_DIM pc1="-0.117339663207531" pc2="0.1622196584939957"/>
+            <PCA_DIM pc1="-0.110982283949852" pc2="0.1680078208446503"/>
+            <PCA_DIM pc1="-0.1054090410470963" pc2="0.1733733713626862"/>
+            <PCA_DIM pc1="-0.09947057068347931" pc2="0.1778944432735443"/>
+            <PCA_DIM pc1="-0.09262417256832123" pc2="0.1803522557020187"/>
+            <PCA_DIM pc1="-0.08587618172168732" pc2="0.1810806840658188"/>
+            <PCA_DIM pc1="-0.07987827062606812" pc2="0.1810054779052734"/>
+            <PCA_DIM pc1="-0.07411762326955795" pc2="0.180339902639389"/>
+            <PCA_DIM pc1="-0.06819649785757065" pc2="0.1792140752077103"/>
+            <PCA_DIM pc1="-0.06231986358761787" pc2="0.1773994415998459"/>
+            <PCA_DIM pc1="-0.05707024782896042" pc2="0.1749745309352875"/>
+            <PCA_DIM pc1="-0.05283017456531525" pc2="0.1723486036062241"/>
+            <PCA_DIM pc1="-0.04884404689073563" pc2="0.1692401617765427"/>
+            <PCA_DIM pc1="-0.04412245005369186" pc2="0.1651929616928101"/>
+          </PCA>
+          <BOXES/>
+        </ELECTRODE>
+        <ELECTRODE name="Electrode 28" stream_name="Rhythm Data-B" source_node_id="120"
+                   selectedUnit="-1" selectedBox="-1">
+          <PLOT stream_source="110" stream_name="Rhythm Data-B" spike_source="120"
+                name="Electrode 28">
+            <AXIS thresh="0.0" range="250.0"/>
+          </PLOT>
+          <PCA numChannels="1" waveformLength="40" pc1min="-10863.0673828125"
+               pc2min="-7666.52294921875" pc1max="18100.755859375" pc2max="11130.0048828125">
+            <PCA_DIM pc1="-0.1629028469324112" pc2="0.03799499571323395"/>
+            <PCA_DIM pc1="-0.1677542924880981" pc2="0.04335791617631912"/>
+            <PCA_DIM pc1="-0.1721554100513458" pc2="0.04823289811611176"/>
+            <PCA_DIM pc1="-0.1767660677433014" pc2="0.05200479179620743"/>
+            <PCA_DIM pc1="-0.1817595213651657" pc2="0.05241207033395767"/>
+            <PCA_DIM pc1="-0.1874389499425888" pc2="0.04412120580673218"/>
+            <PCA_DIM pc1="-0.1982638388872147" pc2="-0.009799112565815449"/>
+            <PCA_DIM pc1="-0.2204331606626511" pc2="-0.1584733426570892"/>
+            <PCA_DIM pc1="-0.2459010481834412" pc2="-0.3355961441993713"/>
+            <PCA_DIM pc1="-0.2539819777011871" pc2="-0.3894357979297638"/>
+            <PCA_DIM pc1="-0.2398076057434082" pc2="-0.298631340265274"/>
+            <PCA_DIM pc1="-0.2200978994369507" pc2="-0.1828920692205429"/>
+            <PCA_DIM pc1="-0.2082105875015259" pc2="-0.1195713207125664"/>
+            <PCA_DIM pc1="-0.202800914645195" pc2="-0.08985248953104019"/>
+            <PCA_DIM pc1="-0.1977186799049377" pc2="-0.05949035659432411"/>
+            <PCA_DIM pc1="-0.1905179023742676" pc2="-0.02401346154510975"/>
+            <PCA_DIM pc1="-0.1825223565101624" pc2="0.008224367164075375"/>
+            <PCA_DIM pc1="-0.1756388247013092" pc2="0.0350891537964344"/>
+            <PCA_DIM pc1="-0.169707864522934" pc2="0.0586850605905056"/>
+            <PCA_DIM pc1="-0.1632692515850067" pc2="0.07948054373264313"/>
+            <PCA_DIM pc1="-0.1561785042285919" pc2="0.09741783142089844"/>
+            <PCA_DIM pc1="-0.1492815911769867" pc2="0.1131862699985504"/>
+            <PCA_DIM pc1="-0.1429166346788406" pc2="0.1270565390586853"/>
+            <PCA_DIM pc1="-0.1368266642093658" pc2="0.1392178535461426"/>
+            <PCA_DIM pc1="-0.1304309219121933" pc2="0.1497264504432678"/>
+            <PCA_DIM pc1="-0.1234094500541687" pc2="0.158304437994957"/>
+            <PCA_DIM pc1="-0.1162683889269829" pc2="0.1653559058904648"/>
+            <PCA_DIM pc1="-0.1099478602409363" pc2="0.1714826673269272"/>
+            <PCA_DIM pc1="-0.104847677052021" pc2="0.1765555143356323"/>
+            <PCA_DIM pc1="-0.1000734195113182" pc2="0.1801091879606247"/>
+            <PCA_DIM pc1="-0.09464836865663528" pc2="0.1819097250699997"/>
+            <PCA_DIM pc1="-0.08883871138095856" pc2="0.1823061555624008"/>
+            <PCA_DIM pc1="-0.08328396081924438" pc2="0.182100921869278"/>
+            <PCA_DIM pc1="-0.07812710106372833" pc2="0.18162702023983"/>
+            <PCA_DIM pc1="-0.07315591722726822" pc2="0.1804619282484055"/>
+            <PCA_DIM pc1="-0.06820622831583023" pc2="0.1783208250999451"/>
+            <PCA_DIM pc1="-0.06350209563970566" pc2="0.1753904223442078"/>
+            <PCA_DIM pc1="-0.05942586064338684" pc2="0.1717815399169922"/>
+            <PCA_DIM pc1="-0.05574357509613037" pc2="0.1675145626068115"/>
+            <PCA_DIM pc1="-0.05202532187104225" pc2="0.1626135557889938"/>
+          </PCA>
+          <BOXES/>
+        </ELECTRODE>
+        <ELECTRODE name="Electrode 29" stream_name="Rhythm Data-B" source_node_id="120"
+                   selectedUnit="-1" selectedBox="-1">
+          <PLOT stream_source="110" stream_name="Rhythm Data-B" spike_source="120"
+                name="Electrode 29">
+            <AXIS thresh="0.0" range="250.0"/>
+          </PLOT>
+          <PCA numChannels="1" waveformLength="40" pc1min="-9630.2958984375"
+               pc2min="-5867.51953125" pc1max="16447.5546875" pc2max="3931.86328125">
+            <PCA_DIM pc1="-0.1681423932313919" pc2="0.05877699330449104"/>
+            <PCA_DIM pc1="-0.1727837026119232" pc2="0.0511012114584446"/>
+            <PCA_DIM pc1="-0.1770683377981186" pc2="0.04202796891331673"/>
+            <PCA_DIM pc1="-0.1810638755559921" pc2="0.03343299403786659"/>
+            <PCA_DIM pc1="-0.185192197561264" pc2="0.02937685139477253"/>
+            <PCA_DIM pc1="-0.1899768561124802" pc2="0.0411188155412674"/>
+            <PCA_DIM pc1="-0.1970280110836029" pc2="0.08487014472484589"/>
+            <PCA_DIM pc1="-0.2074131071567535" pc2="0.1550242155790329"/>
+            <PCA_DIM pc1="-0.2179084122180939" pc2="0.2189705073833466"/>
+            <PCA_DIM pc1="-0.2221190333366394" pc2="0.2493903785943985"/>
+            <PCA_DIM pc1="-0.2177848815917969" pc2="0.2438565045595169"/>
+            <PCA_DIM pc1="-0.2098865211009979" pc2="0.2145212888717651"/>
+            <PCA_DIM pc1="-0.2035767883062363" pc2="0.1735124140977859"/>
+            <PCA_DIM pc1="-0.1989187449216843" pc2="0.1294810324907303"/>
+            <PCA_DIM pc1="-0.1941849887371063" pc2="0.08755237609148026"/>
+            <PCA_DIM pc1="-0.1891373842954636" pc2="0.05018557980656624"/>
+            <PCA_DIM pc1="-0.1843324601650238" pc2="0.01777160912752151"/>
+            <PCA_DIM pc1="-0.1798441559076309" pc2="-0.01171176414936781"/>
+            <PCA_DIM pc1="-0.1753834336996078" pc2="-0.0401691347360611"/>
+            <PCA_DIM pc1="-0.1709663271903992" pc2="-0.06678732484579086"/>
+            <PCA_DIM pc1="-0.1663131415843964" pc2="-0.08925720304250717"/>
+            <PCA_DIM pc1="-0.1606839746236801" pc2="-0.1072350591421127"/>
+            <PCA_DIM pc1="-0.1541068553924561" pc2="-0.1224602311849594"/>
+            <PCA_DIM pc1="-0.1469038724899292" pc2="-0.136885404586792"/>
+            <PCA_DIM pc1="-0.1394640803337097" pc2="-0.150849774479866"/>
+            <PCA_DIM pc1="-0.1325633823871613" pc2="-0.1628492027521133"/>
+            <PCA_DIM pc1="-0.1261382251977921" pc2="-0.1722482889890671"/>
+            <PCA_DIM pc1="-0.1198764368891716" pc2="-0.1800368875265121"/>
+            <PCA_DIM pc1="-0.1142796650528908" pc2="-0.1875964105129242"/>
+            <PCA_DIM pc1="-0.109455868601799" pc2="-0.195110097527504"/>
+            <PCA_DIM pc1="-0.1044343858957291" pc2="-0.2013906240463257"/>
+            <PCA_DIM pc1="-0.09851007908582687" pc2="-0.2062050253152847"/>
+            <PCA_DIM pc1="-0.09230336546897888" pc2="-0.2102953046560287"/>
+            <PCA_DIM pc1="-0.08682660013437271" pc2="-0.2132834196090698"/>
+            <PCA_DIM pc1="-0.08196210116147995" pc2="-0.2143304944038391"/>
+            <PCA_DIM pc1="-0.07677266746759415" pc2="-0.2137906402349472"/>
+            <PCA_DIM pc1="-0.07103811204433441" pc2="-0.2128098458051682"/>
+            <PCA_DIM pc1="-0.06518147140741348" pc2="-0.2117003053426743"/>
+            <PCA_DIM pc1="-0.05989360809326172" pc2="-0.2092198878526688"/>
+            <PCA_DIM pc1="-0.05552979186177254" pc2="-0.2047313004732132"/>
+          </PCA>
+          <BOXES/>
+        </ELECTRODE>
+        <ELECTRODE name="Electrode 30" stream_name="Rhythm Data-B" source_node_id="120"
+                   selectedUnit="-1" selectedBox="-1">
+          <PLOT stream_source="110" stream_name="Rhythm Data-B" spike_source="120"
+                name="Electrode 30">
+            <AXIS thresh="0.0" range="250.0"/>
+          </PLOT>
+          <PCA numChannels="1" waveformLength="40" pc1min="-13217.2744140625"
+               pc2min="-18041.46875" pc1max="22063.29296875" pc2max="24391.8671875">
+            <PCA_DIM pc1="-0.1315913051366806" pc2="0.1274142563343048"/>
+            <PCA_DIM pc1="-0.1360608041286469" pc2="0.1335033476352692"/>
+            <PCA_DIM pc1="-0.1400479972362518" pc2="0.1388020664453506"/>
+            <PCA_DIM pc1="-0.1436528861522675" pc2="0.1430652439594269"/>
+            <PCA_DIM pc1="-0.1500179618597031" pc2="0.1340567320585251"/>
+            <PCA_DIM pc1="-0.164768785238266" pc2="0.08951544761657715"/>
+            <PCA_DIM pc1="-0.1932393759489059" pc2="0.0002460773685015738"/>
+            <PCA_DIM pc1="-0.2386280596256256" pc2="-0.1276918202638626"/>
+            <PCA_DIM pc1="-0.2871429324150085" pc2="-0.2520682811737061"/>
+            <PCA_DIM pc1="-0.3091630935668945" pc2="-0.3018650710582733"/>
+            <PCA_DIM pc1="-0.2943861484527588" pc2="-0.2577582001686096"/>
+            <PCA_DIM pc1="-0.2632426619529724" pc2="-0.1708269715309143"/>
+            <PCA_DIM pc1="-0.2387746274471283" pc2="-0.09937203675508499"/>
+            <PCA_DIM pc1="-0.2253854870796204" pc2="-0.06005986407399178"/>
+            <PCA_DIM pc1="-0.215483695268631" pc2="-0.03555870801210403"/>
+            <PCA_DIM pc1="-0.204091414809227" pc2="-0.009895605966448784"/>
+            <PCA_DIM pc1="-0.1917664855718613" pc2="0.01845124550163746"/>
+            <PCA_DIM pc1="-0.1799915134906769" pc2="0.04521975293755531"/>
+            <PCA_DIM pc1="-0.1689745336771011" pc2="0.06847661733627319"/>
+            <PCA_DIM pc1="-0.1582507789134979" pc2="0.08883281797170639"/>
+            <PCA_DIM pc1="-0.1475293785333633" pc2="0.1068455129861832"/>
+            <PCA_DIM pc1="-0.1370209604501724" pc2="0.1227073818445206"/>
+            <PCA_DIM pc1="-0.1267605274915695" pc2="0.1365921199321747"/>
+            <PCA_DIM pc1="-0.1165608763694763" pc2="0.1484384834766388"/>
+            <PCA_DIM pc1="-0.1066078171133995" pc2="0.1584746688604355"/>
+            <PCA_DIM pc1="-0.09706363826990128" pc2="0.167026087641716"/>
+            <PCA_DIM pc1="-0.08797518163919449" pc2="0.1740911453962326"/>
+            <PCA_DIM pc1="-0.07960298657417297" pc2="0.1798739731311798"/>
+            <PCA_DIM pc1="-0.07204131782054901" pc2="0.1846630722284317"/>
+            <PCA_DIM pc1="-0.0649702325463295" pc2="0.1883581280708313"/>
+            <PCA_DIM pc1="-0.05816309899091721" pc2="0.190901979804039"/>
+            <PCA_DIM pc1="-0.05180031061172485" pc2="0.1925067603588104"/>
+            <PCA_DIM pc1="-0.04582510888576508" pc2="0.1931652724742889"/>
+            <PCA_DIM pc1="-0.03977781161665916" pc2="0.1926179081201553"/>
+            <PCA_DIM pc1="-0.03370317816734314" pc2="0.1910370588302612"/>
+            <PCA_DIM pc1="-0.02813645824790001" pc2="0.1889695525169373"/>
+            <PCA_DIM pc1="-0.023172402754426" pc2="0.1866101771593094"/>
+            <PCA_DIM pc1="-0.01852217502892017" pc2="0.1836096495389938"/>
+            <PCA_DIM pc1="-0.01409890595823526" pc2="0.1795564144849777"/>
+            <PCA_DIM pc1="-0.01007304154336452" pc2="0.1746751219034195"/>
+          </PCA>
+          <BOXES/>
+        </ELECTRODE>
+        <ELECTRODE name="Electrode 31" stream_name="Rhythm Data-B" source_node_id="120"
+                   selectedUnit="-1" selectedBox="-1">
+          <PLOT stream_source="110" stream_name="Rhythm Data-B" spike_source="120"
+                name="Electrode 31">
+            <AXIS thresh="0.0" range="500.0"/>
+          </PLOT>
+          <PCA numChannels="1" waveformLength="40" pc1min="-10376.01953125"
+               pc2min="-5707.6611328125" pc1max="17607.92578125" pc2max="3993.775634765625">
+            <PCA_DIM pc1="-0.1600451171398163" pc2="0.06282705813646317"/>
+            <PCA_DIM pc1="-0.1663620471954346" pc2="0.07091683149337769"/>
+            <PCA_DIM pc1="-0.1729147136211395" pc2="0.0832621231675148"/>
+            <PCA_DIM pc1="-0.1797970235347748" pc2="0.09835757315158844"/>
+            <PCA_DIM pc1="-0.1858847588300705" pc2="0.1157685965299606"/>
+            <PCA_DIM pc1="-0.1910155117511749" pc2="0.1350603401660919"/>
+            <PCA_DIM pc1="-0.1987293660640717" pc2="0.1522419452667236"/>
+            <PCA_DIM pc1="-0.2128562778234482" pc2="0.1619553416967392"/>
+            <PCA_DIM pc1="-0.2295510023832321" pc2="0.1638491600751877"/>
+            <PCA_DIM pc1="-0.2362720817327499" pc2="0.1603379994630814"/>
+            <PCA_DIM pc1="-0.2266542613506317" pc2="0.1519283652305603"/>
+            <PCA_DIM pc1="-0.210361659526825" pc2="0.1392064392566681"/>
+            <PCA_DIM pc1="-0.1997755914926529" pc2="0.1249477043747902"/>
+            <PCA_DIM pc1="-0.1965886056423187" pc2="0.111348994076252"/>
+            <PCA_DIM pc1="-0.1951937228441238" pc2="0.09714535623788834"/>
+            <PCA_DIM pc1="-0.1911311149597168" pc2="0.07640250027179718"/>
+            <PCA_DIM pc1="-0.1850584000349045" pc2="0.04461117088794708"/>
+            <PCA_DIM pc1="-0.1789915263652802" pc2="0.006707710213959217"/>
+            <PCA_DIM pc1="-0.1727549731731415" pc2="-0.02956464514136314"/>
+            <PCA_DIM pc1="-0.1668228507041931" pc2="-0.06154293194413185"/>
+            <PCA_DIM pc1="-0.1618791073560715" pc2="-0.08915695548057556"/>
+            <PCA_DIM pc1="-0.1567787826061249" pc2="-0.1124879866838455"/>
+            <PCA_DIM pc1="-0.1507794111967087" pc2="-0.1316981017589569"/>
+            <PCA_DIM pc1="-0.1445598602294922" pc2="-0.1474595218896866"/>
+            <PCA_DIM pc1="-0.1385070830583572" pc2="-0.1610817313194275"/>
+            <PCA_DIM pc1="-0.1320787370204926" pc2="-0.1740949153900146"/>
+            <PCA_DIM pc1="-0.1252055913209915" pc2="-0.186767190694809"/>
+            <PCA_DIM pc1="-0.1188359558582306" pc2="-0.1978867053985596"/>
+            <PCA_DIM pc1="-0.113415040075779" pc2="-0.2067819088697433"/>
+            <PCA_DIM pc1="-0.1082223579287529" pc2="-0.2128228843212128"/>
+            <PCA_DIM pc1="-0.1024351567029953" pc2="-0.2159108072519302"/>
+            <PCA_DIM pc1="-0.09609142690896988" pc2="-0.2180179953575134"/>
+            <PCA_DIM pc1="-0.09011143445968628" pc2="-0.2209191024303436"/>
+            <PCA_DIM pc1="-0.08487988263368607" pc2="-0.2238281071186066"/>
+            <PCA_DIM pc1="-0.07985544204711914" pc2="-0.2243174463510513"/>
+            <PCA_DIM pc1="-0.07478997111320496" pc2="-0.2214373499155045"/>
+            <PCA_DIM pc1="-0.06954393535852432" pc2="-0.2170276492834091"/>
+            <PCA_DIM pc1="-0.06381735950708389" pc2="-0.2131412625312805"/>
+            <PCA_DIM pc1="-0.05769208446145058" pc2="-0.2094461619853973"/>
+            <PCA_DIM pc1="-0.05170563608407974" pc2="-0.2037730515003204"/>
+          </PCA>
+          <BOXES/>
+        </ELECTRODE>
+        <ELECTRODE name="Electrode 32" stream_name="Rhythm Data-B" source_node_id="120"
+                   selectedUnit="-1" selectedBox="-1">
+          <PLOT stream_source="110" stream_name="Rhythm Data-B" spike_source="120"
+                name="Electrode 32">
+            <AXIS thresh="0.0" range="250.0"/>
+          </PLOT>
+          <PCA numChannels="1" waveformLength="40" pc1min="-17755.24609375"
+               pc2min="-17247.890625" pc1max="29682.58984375" pc2max="19312.33984375">
+            <PCA_DIM pc1="-0.1008127480745316" pc2="0.166467547416687"/>
+            <PCA_DIM pc1="-0.1043500676751137" pc2="0.1758194863796234"/>
+            <PCA_DIM pc1="-0.1073595806956291" pc2="0.1835121214389801"/>
+            <PCA_DIM pc1="-0.1100376471877098" pc2="0.1890504658222198"/>
+            <PCA_DIM pc1="-0.1167949438095093" pc2="0.182749480009079"/>
+            <PCA_DIM pc1="-0.1386998295783997" pc2="0.1419740617275238"/>
+            <PCA_DIM pc1="-0.1871209144592285" pc2="0.05214550718665123"/>
+            <PCA_DIM pc1="-0.2609801590442657" pc2="-0.07344578951597214"/>
+            <PCA_DIM pc1="-0.3296538889408112" pc2="-0.1800335198640823"/>
+            <PCA_DIM pc1="-0.3513933718204498" pc2="-0.2062825262546539"/>
+            <PCA_DIM pc1="-0.3258486688137054" pc2="-0.160055473446846"/>
+            <PCA_DIM pc1="-0.2892244458198547" pc2="-0.09936727583408356"/>
+            <PCA_DIM pc1="-0.2639190554618835" pc2="-0.05633365735411644"/>
+            <PCA_DIM pc1="-0.2469037771224976" pc2="-0.02685274742543697"/>
+            <PCA_DIM pc1="-0.2300093173980713" pc2="-0.0002978237171191722"/>
+            <PCA_DIM pc1="-0.2111640274524689" pc2="0.02605265751481056"/>
+            <PCA_DIM pc1="-0.1919915676116943" pc2="0.05073092505335808"/>
+            <PCA_DIM pc1="-0.1737431287765503" pc2="0.0728837177157402"/>
+            <PCA_DIM pc1="-0.1564192771911621" pc2="0.09270606189966202"/>
+            <PCA_DIM pc1="-0.1396253705024719" pc2="0.1105817630887032"/>
+            <PCA_DIM pc1="-0.1233604997396469" pc2="0.1267206817865372"/>
+            <PCA_DIM pc1="-0.1077795699238777" pc2="0.1410518437623978"/>
+            <PCA_DIM pc1="-0.09297116845846176" pc2="0.1535001993179321"/>
+            <PCA_DIM pc1="-0.07915320992469788" pc2="0.1642422378063202"/>
+            <PCA_DIM pc1="-0.06648878008127213" pc2="0.1734606176614761"/>
+            <PCA_DIM pc1="-0.05481472238898277" pc2="0.181172177195549"/>
+            <PCA_DIM pc1="-0.04372601211071014" pc2="0.1872372627258301"/>
+            <PCA_DIM pc1="-0.03338056802749634" pc2="0.1918190121650696"/>
+            <PCA_DIM pc1="-0.02420422993600368" pc2="0.1953430771827698"/>
+            <PCA_DIM pc1="-0.01593207567930222" pc2="0.1978234946727753"/>
+            <PCA_DIM pc1="-0.008143272250890732" pc2="0.1990828365087509"/>
+            <PCA_DIM pc1="-0.0007446238887496293" pc2="0.1991325467824936"/>
+            <PCA_DIM pc1="0.006043931469321251" pc2="0.1983192563056946"/>
+            <PCA_DIM pc1="0.01201451756060123" pc2="0.1970547586679459"/>
+            <PCA_DIM pc1="0.01728819496929646" pc2="0.1952530443668365"/>
+            <PCA_DIM pc1="0.02201054617762566" pc2="0.1927847415208817"/>
+            <PCA_DIM pc1="0.0264056995511055" pc2="0.1897716671228409"/>
+            <PCA_DIM pc1="0.03055497072637081" pc2="0.1861677318811417"/>
+            <PCA_DIM pc1="0.03409727290272713" pc2="0.1819776743650436"/>
+            <PCA_DIM pc1="0.03680652007460594" pc2="0.177422434091568"/>
+          </PCA>
+          <BOXES/>
+        </ELECTRODE>
+      </CUSTOM_PARAMETERS>
+      <EDITOR isCollapsed="0" isDrawerOpen="0" displayName="Spike Sorter" activeStream="0"
+              Type="Visualizer">
+        <TAB Active="0" Index="-1"/>
+        <WINDOW Active="0" x="324" y="29" width="1020" height="780"/>
+      </EDITOR>
+    </PROCESSOR>
+    <PROCESSOR name="Spike Viewer" insertionPoint="1" pluginName="Spike Viewer"
+               type="1" index="2" libraryName="Basic Spike Display" libraryVersion="0.6.7"
+               processorType="3" nodeId="119">
+      <GLOBAL_PARAMETERS/>
+      <STREAM name="Rhythm Data-B" description="Continuous and event data from a device running Rhythm FPGA firmware"
+              sample_rate="30000.0" channel_count="32">
+        <PARAMETERS enable_stream="1"/>
+      </STREAM>
+      <CUSTOM_PARAMETERS/>
+      <EDITOR isCollapsed="0" isDrawerOpen="0" displayName="Spike Viewer" activeStream="0"
+              Type="Visualizer" scale_factor_index="1">
+        <TAB Active="0" Index="-1"/>
+        <WINDOW Active="1" x="1542" y="-37" width="946" height="662"/>
+        <SPIKEDISPLAY LockThresholds="0" InvertSpikes="0" NumPlots="32">
+          <PLOT stream_source="110" stream_name="Rhythm Data-B" source_node="120"
+                name="Electrode 1" isMonitored="0">
+            <AXIS thresh="0.0" range="500.0"/>
+          </PLOT>
+          <PLOT stream_source="110" stream_name="Rhythm Data-B" source_node="120"
+                name="Electrode 2" isMonitored="0">
+            <AXIS thresh="0.0" range="500.0"/>
+          </PLOT>
+          <PLOT stream_source="110" stream_name="Rhythm Data-B" source_node="120"
+                name="Electrode 3" isMonitored="0">
+            <AXIS thresh="0.0" range="250.0"/>
+          </PLOT>
+          <PLOT stream_source="110" stream_name="Rhythm Data-B" source_node="120"
+                name="Electrode 4" isMonitored="0">
+            <AXIS thresh="0.0" range="250.0"/>
+          </PLOT>
+          <PLOT stream_source="110" stream_name="Rhythm Data-B" source_node="120"
+                name="Electrode 5" isMonitored="0">
+            <AXIS thresh="0.0" range="250.0"/>
+          </PLOT>
+          <PLOT stream_source="110" stream_name="Rhythm Data-B" source_node="120"
+                name="Electrode 6" isMonitored="0">
+            <AXIS thresh="0.0" range="250.0"/>
+          </PLOT>
+          <PLOT stream_source="110" stream_name="Rhythm Data-B" source_node="120"
+                name="Electrode 7" isMonitored="0">
+            <AXIS thresh="0.0" range="250.0"/>
+          </PLOT>
+          <PLOT stream_source="110" stream_name="Rhythm Data-B" source_node="120"
+                name="Electrode 8" isMonitored="0">
+            <AXIS thresh="0.0" range="250.0"/>
+          </PLOT>
+          <PLOT stream_source="110" stream_name="Rhythm Data-B" source_node="120"
+                name="Electrode 9" isMonitored="0">
+            <AXIS thresh="0.0" range="250.0"/>
+          </PLOT>
+          <PLOT stream_source="110" stream_name="Rhythm Data-B" source_node="120"
+                name="Electrode 10" isMonitored="0">
+            <AXIS thresh="0.0" range="250.0"/>
+          </PLOT>
+          <PLOT stream_source="110" stream_name="Rhythm Data-B" source_node="120"
+                name="Electrode 11" isMonitored="0">
+            <AXIS thresh="0.0" range="250.0"/>
+          </PLOT>
+          <PLOT stream_source="110" stream_name="Rhythm Data-B" source_node="120"
+                name="Electrode 12" isMonitored="0">
+            <AXIS thresh="0.0" range="250.0"/>
+          </PLOT>
+          <PLOT stream_source="110" stream_name="Rhythm Data-B" source_node="120"
+                name="Electrode 13" isMonitored="0">
+            <AXIS thresh="0.0" range="250.0"/>
+          </PLOT>
+          <PLOT stream_source="110" stream_name="Rhythm Data-B" source_node="120"
+                name="Electrode 14" isMonitored="0">
+            <AXIS thresh="0.0" range="250.0"/>
+          </PLOT>
+          <PLOT stream_source="110" stream_name="Rhythm Data-B" source_node="120"
+                name="Electrode 15" isMonitored="0">
+            <AXIS thresh="0.0" range="250.0"/>
+          </PLOT>
+          <PLOT stream_source="110" stream_name="Rhythm Data-B" source_node="120"
+                name="Electrode 16" isMonitored="0">
+            <AXIS thresh="0.0" range="250.0"/>
+          </PLOT>
+          <PLOT stream_source="110" stream_name="Rhythm Data-B" source_node="120"
+                name="Electrode 17" isMonitored="0">
+            <AXIS thresh="0.0" range="250.0"/>
+          </PLOT>
+          <PLOT stream_source="110" stream_name="Rhythm Data-B" source_node="120"
+                name="Electrode 18" isMonitored="0">
+            <AXIS thresh="0.0" range="250.0"/>
+          </PLOT>
+          <PLOT stream_source="110" stream_name="Rhythm Data-B" source_node="120"
+                name="Electrode 19" isMonitored="0">
+            <AXIS thresh="0.0" range="250.0"/>
+          </PLOT>
+          <PLOT stream_source="110" stream_name="Rhythm Data-B" source_node="120"
+                name="Electrode 20" isMonitored="0">
+            <AXIS thresh="0.0" range="250.0"/>
+          </PLOT>
+          <PLOT stream_source="110" stream_name="Rhythm Data-B" source_node="120"
+                name="Electrode 21" isMonitored="0">
+            <AXIS thresh="0.0" range="250.0"/>
+          </PLOT>
+          <PLOT stream_source="110" stream_name="Rhythm Data-B" source_node="120"
+                name="Electrode 22" isMonitored="0">
+            <AXIS thresh="0.0" range="250.0"/>
+          </PLOT>
+          <PLOT stream_source="110" stream_name="Rhythm Data-B" source_node="120"
+                name="Electrode 23" isMonitored="0">
+            <AXIS thresh="0.0" range="250.0"/>
+          </PLOT>
+          <PLOT stream_source="110" stream_name="Rhythm Data-B" source_node="120"
+                name="Electrode 24" isMonitored="0">
+            <AXIS thresh="0.0" range="250.0"/>
+          </PLOT>
+          <PLOT stream_source="110" stream_name="Rhythm Data-B" source_node="120"
+                name="Electrode 25" isMonitored="0">
+            <AXIS thresh="0.0" range="250.0"/>
+          </PLOT>
+          <PLOT stream_source="110" stream_name="Rhythm Data-B" source_node="120"
+                name="Electrode 26" isMonitored="0">
+            <AXIS thresh="0.0" range="250.0"/>
+          </PLOT>
+          <PLOT stream_source="110" stream_name="Rhythm Data-B" source_node="120"
+                name="Electrode 27" isMonitored="0">
+            <AXIS thresh="0.0" range="250.0"/>
+          </PLOT>
+          <PLOT stream_source="110" stream_name="Rhythm Data-B" source_node="120"
+                name="Electrode 28" isMonitored="0">
+            <AXIS thresh="0.0" range="250.0"/>
+          </PLOT>
+          <PLOT stream_source="110" stream_name="Rhythm Data-B" source_node="120"
+                name="Electrode 29" isMonitored="0">
+            <AXIS thresh="0.0" range="250.0"/>
+          </PLOT>
+          <PLOT stream_source="110" stream_name="Rhythm Data-B" source_node="120"
+                name="Electrode 30" isMonitored="0">
+            <AXIS thresh="0.0" range="250.0"/>
+          </PLOT>
+          <PLOT stream_source="110" stream_name="Rhythm Data-B" source_node="120"
+                name="Electrode 31" isMonitored="0">
+            <AXIS thresh="0.0" range="500.0"/>
+          </PLOT>
+          <PLOT stream_source="110" stream_name="Rhythm Data-B" source_node="120"
+                name="Electrode 32" isMonitored="0">
+            <AXIS thresh="0.0" range="250.0"/>
+          </PLOT>
+        </SPIKEDISPLAY>
+      </EDITOR>
+    </PROCESSOR>
+  </SIGNALCHAIN>
+  <EDITORVIEWPORT scroll="372">
+    <ACQUISITION_BOARD ID="110"/>
+    <BANDPASS_FILTER ID="112"/>
+    <SPLITTER ID="117"/>
+    <SPIKE_DETECTOR ID="120"/>
+    <SPIKE_SORTER ID="118"/>
+    <SPIKE_VIEWER ID="119"/>
+  </EDITORVIEWPORT>
+  <DATAVIEWPORT selectedTab="2"/>
+  <AUDIO sampleRate="48000.0" bufferSize="1024" deviceType="Windows Audio">
+    <DEVICESETUP deviceType="Windows Audio" audioOutputDeviceName="Speakers / Headphones (Realtek Audio)"
+                 audioInputDeviceName="" audioDeviceRate="48000.0" audioDeviceBufferSize="1024"/>
+  </AUDIO>
+  <CONTROLPANEL isOpen="1" recordPath="C:\Users\Plexon\Documents\Open Ephys"
+                recordEngine="BINARY" clockMode="0"/>
+  <AUDIOEDITOR isMuted="0" volume="100.0" noiseGate="100.0"/>
+  <FILENAMECONFIG>
+    <PREPEND state="2" value="G1_C7_1550um_22mW_250ms"/>
+    <MAIN state="1" value="2025-09-11_18-11-51"/>
+    <APPEND state="0" value=""/>
+  </FILENAMECONFIG>
+  <PROCESSORLIST>
+    <COLOR ID="801" R="59" G="59" B="59"/>
+    <COLOR ID="804" R="241" G="90" B="41"/>
+    <COLOR ID="802" R="0" G="174" B="239"/>
+    <COLOR ID="803" R="0" G="166" B="81"/>
+    <COLOR ID="805" R="147" G="149" B="152"/>
+    <COLOR ID="806" R="255" G="0" B="0"/>
+    <COLOR ID="807" R="0" G="0" B="0"/>
+  </PROCESSORLIST>
+  <UICOMPONENT isProcessorListOpen="1" isEditorViewportOpen="1"/>
+</SETTINGS>
