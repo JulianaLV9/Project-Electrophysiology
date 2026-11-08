@@ -1,0 +1,66 @@
+1. INTRODUCCIÓN
+
+Los registros electrofisiológicos en las neurociencias tienen como objetivo medir la actividad eléctrica de las neuronas con una alta resolución temporal los cambios en su potencial 
+eléctrico originados por la actividad biológica de la neurona. Estos registros se pueden realizar con dos aproximaciones: los registros intracelulares y los extracelulares. 
+
+Los registros intracelulares se utilizan microelectrodos de vidrio penetrantes que permiten cuantificar de manera directa la diferencia del potencial a través de la membrana celular
+de somas individuales. Por otro lado, el registro extracelular conciste en colocar microelectrodos metálicos o arreglos de multielectrodos en el espacio extracelularcircundante de las 
+neuronas, capturando los fluos de corrientes iónicas de una o más neuronas de manera simultánea. 
+
+Los registros extracelulares tienen una gran ventaja para el entendimiento de cómo las neuronas interactúan entre ellas, sin embargo, el procesamiento y entendimeinto de esta información
+sigue siendo un desafío en el área de las neurociencias. La complejidad radica en que las señales continuas registradas por cada unos de los electrodos puede agrupar a 1 o más neuronas de
+manera simultánea, por lo que requiere de procesos de filtrado, umbralizar la señal, identificación de espigas individuales. Adicionalmente a los registros se les puede integrar otras técnicas 
+como la optogenética que a través de la expresión de las opsinas en la membrana permite excitar o inhbir a las neuronas a una longitud de onda específica para identificarlas. 
+La aplicación del LED introduce una frecuencia de artefactos fotoeléctricos en los electrodos, los cuáles se puede confundir con la actividad eléctrica propia de la neurona.
+
+- Propósito: 
+Desarrollar una herramienta de análisis y visualización para el preprocesamiento, detección, reducción de dimensionalidad y agrupamiento de espigas de los registros electrofisiológicos
+multicanal a través del programa de código abierto OpenEphys. El programa permitirá cargar datos de tipo continuo oebin y binario para poder sincronizar los eventos temporales y las entradas
+digitales (TTL) para sincronizar los eventos neuronales con las técnicas de optogenéticas para identificar el momento exacto en el que se encendió el led y saber qué sucedio con 
+la actividad eléctrica. Además de clasificar las neuronas a través de análisis de componentes principales (PCA) y agrupamiento de estas (clusterización).
+
+-Motivación:
+Existen pocas herramientas de código abierto que permitan al usuario visualizar su registro fuera de línea y pueda procesar estas señales electrofisiológicas. Este programa permite un flujo
+de trabajo automatizado con la mínima supervisión para tener información confiable de las neuronas, permitiendo un análisis más limpio de la actividad eléctrica. 
+
+2. REQUERIMIENTOS FUNCIONALES
+-Instalar la biblioteca open_ephys.analysis
+-Carga de sesiones Open Ephys: El sistema permite seleccionar interactivamente un directorio y cargar registros en formato binario (.oebin / estructura de Record Nodes de Open Ephys) 
+mediante la biblioteca open_ephys.analysis (la cual hay que instalar previamente)
+-Sincronización analógica y digital: El programa a través de la libreria de openephys extrae las marcas de tiempo analógicas y los eventos digitales (TTL) calculando las marcas de tiempo
+globales sincronizadas e intervalos de desfase para permitir la sincronizción de ambas señales.
+- Filtro pasabandas: Aplicación de filtro pasabandas (300 a 6000 Hz) sobre todos los canales de registro analógicos continuos para la visualización de espigas considerando la
+frecuencia de muestreo a la que fueron adquiridos (30,000 Hz).
+-Detección de trenes de estimulación: El software identifica las ventanas de pulsos TTL (Onset_Pulse y Offset_Pulse) y agrupar trenes de estimulación optogenética.
+-Umbralizar la señal para detección de espigas: Se calculan umbrales por canal individual por canal y se extrae la matriz temporal y formas de onda.
+-Reducción de dimensionalidad (PCA) y Clustering (K-Means): Se ejecuta un análsis de componentes principales (PCA) sobre las espigas y se clasifican las neuronas por medio de 
+de clustering no supervisado (K-Means)
+-Filtrado de artefactos LED: El usuario discrimina y elimina clusters asociados con los artefactos fotoeléctricos. 
+-Generación de matrices de los eventos: Matrices periestímulo (alrededor de los pulsos de luz led), con información binaria de cuando ocurrio una espiga en ventanas temporales. 
+-Generación de datsos que contiene la metada y datos del registro. 
+
+3. REQUERIMIENTOS NO FUNCIONALES
+-Las funciones de filtrado, detección, PCA, clustering residen en un módulo externo llamado functions_for_preprocess.py  
+-Portabilidad de rutas: El código no contiene rutas absolutas, admitiendo rutas para garantizar ejecución cruzada en Linux, macOS y Windows.   
+-Gestión de memoria: Las grabaciones multicanal de duración moderada de 30-60 minutos debido a que los archivos de oebin son pesados por lo que se recmienda mínmo 8 a 16 GB de RAM
+-Claridad: El código registra en la consola el avance de las etapas críticas como reducción de dimensiones, recorte de timestamps, clusters detectados y rutas de guardado de los archivos.
+
+4. CASOS DE USO
+
+Condiciones: Directorio con estructura estándar de Open Ephys que contenga datos continuos, eventos TTL sincronizados y metadatos válidos.
+Flujo principal:
+1.El usuario ejecuta el script y selecciona la carpeta del Record Node del registro por procesar.
+2.El programa carga los canales continuos y eventos digitales tipo (TTL).
+3.El programa alinea el tiempo temporal base y filtra la señal pasobanda. 
+4.El programa umbraliza la señal de cada uno de los canales y detecta las espigas.  
+5.El sistema proyecta las formas de onda en el espacio de PCA y agrupa clusters.   
+6.El programa segmenta los trenes de pulsos.
+7.El programadetecta y remueve los artefactos vinculados al pulso de luz.   
+8.El programa guarda en la carpeta de origen metadata.pkl y register_output.pkl y emite mensajes de confirmación.   
+
+Resultado: Datos clasificados y ordenados listos para análisis de peri-estímulo (PSTH) y cálculo de latencias.
+
+5. RESTRICCIONES DEL PROYECTO
+-Funciona únicamente con datos oebin provinientes de OpenEphys
+-Limitado a usuarios que hagan registro electrofisiologicos y optogenética de manera simultánea.
+
